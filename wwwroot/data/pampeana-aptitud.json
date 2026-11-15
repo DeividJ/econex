@@ -1,0 +1,1360 @@
+{
+ "version": 1,
+ "region": {
+  "id": "pampeana",
+  "nombre": "Región Pampeana",
+  "provincias": "Buenos Aires, CABA, Córdoba, Santa Fe, Entre Ríos y La Pampa"
+ },
+ "aviso": "Base de referencia orientativa elaborada para AgroAlerta. No es una respuesta en tiempo real de una API del INTA: los valores deben validarse con la Estación Experimental del INTA de la zona.",
+ "fuentes": [
+  {
+   "t": "INTA EEA Pergamino",
+   "u": "https://inta.gob.ar/pergamino"
+  },
+  {
+   "t": "INTA EEA Marcos Juárez",
+   "u": "https://inta.gob.ar/marcosjuarez"
+  },
+  {
+   "t": "INTA EEA Balcarce",
+   "u": "https://inta.gob.ar/balcarce"
+  },
+  {
+   "t": "INTA EEA Anguil (La Pampa)",
+   "u": "https://inta.gob.ar/anguil"
+  },
+  {
+   "t": "GeoINTA – visor de mapas de suelos",
+   "u": "https://visor.geointa.inta.gob.ar/"
+  }
+ ],
+ "subregiones": [
+  {
+   "id": "pampa-ondulada",
+   "nombre": "Pampa Ondulada",
+   "provincias": "Norte de Buenos Aires, sur de Santa Fe y sudeste de Córdoba",
+   "altitud": "Aprox. 20 a 100 msnm",
+   "clima": "Templado húmedo, con lluvias de 900 a 1.100 mm anuales, veranos cálidos y heladas moderadas en invierno.",
+   "suelo": "Molisoles profundos (argiudoles) de alta fertilidad, pero sensibles a la erosión hídrica en lomas y a la compactación por agricultura continua.",
+   "peligros": [
+    "Erosión hídrica",
+    "Excesos hídricos y anegamientos puntuales",
+    "Compactación y pérdida de materia orgánica",
+    "Granizo",
+    "Sequías estivales ocasionales"
+   ],
+   "inta": {
+    "t": "INTA EEA Pergamino",
+    "u": "https://inta.gob.ar/pergamino"
+   }
+  },
+  {
+   "id": "pampa-llana",
+   "nombre": "Pampa Llana",
+   "provincias": "Noroeste de Buenos Aires, sur de Córdoba y sur de Santa Fe",
+   "altitud": "Aprox. 80 a 150 msnm",
+   "clima": "Templado subhúmedo, con lluvias de 750 a 950 mm y déficits hídricos eventuales en verano.",
+   "suelo": "Suelos de textura franca a franco-arenosa, con buena aptitud agrícola y limitantes localizadas (arenosidad, napa fluctuante, sodicidad); mayor riesgo de erosión eólica en los arenosos.",
+   "peligros": [
+    "Sequía estival",
+    "Erosión eólica en suelos arenosos",
+    "Ascenso de napa e inundaciones",
+    "Heladas tardías y tempranas",
+    "Granizo"
+   ],
+   "inta": {
+    "t": "INTA EEA Marcos Juárez",
+    "u": "https://inta.gob.ar/marcosjuarez"
+   }
+  },
+  {
+   "id": "pampa-deprimida",
+   "nombre": "Pampa Deprimida (cuenca del Salado)",
+   "provincias": "Centro-este de Buenos Aires",
+   "altitud": "Menos de 50 msnm",
+   "clima": "Templado subhúmedo a húmedo, con lluvias de 850 a 1.000 mm y alternancia de inundaciones y sequías.",
+   "suelo": "Relieve muy plano con drenaje deficiente, alta sodicidad y salinidad en los bajos; aptitud principalmente ganadera y agrícola solo en las lomas.",
+   "peligros": [
+    "Inundaciones prolongadas",
+    "Sequías agudas",
+    "Suelos alcalinos o sódicos",
+    "Heladas",
+    "Baja capacidad portante de los suelos"
+   ],
+   "inta": {
+    "t": "INTA – Centro Regional Buenos Aires Sur",
+    "u": "https://www.argentina.gob.ar/inta"
+   }
+  },
+  {
+   "id": "pampa-austral",
+   "nombre": "Pampa Austral (sudeste bonaerense)",
+   "provincias": "Sudeste de Buenos Aires (Tandil, Balcarce, Necochea, Tres Arroyos)",
+   "altitud": "Aprox. 20 a 300 msnm",
+   "clima": "Templado fresco, con lluvias de 700 a 900 mm bien repartidas y ciclos de cultivo más largos que en el norte.",
+   "suelo": "Molisoles con tosca (horizonte calcáreo) poco profunda en muchos sectores, que limita el enraizamiento y la retención de agua; en general fértiles.",
+   "peligros": [
+    "Tosca superficial que limita la profundidad del suelo",
+    "Sequías en llenado",
+    "Heladas tardías",
+    "Erosión hídrica y eólica",
+    "Vientos intensos"
+   ],
+   "inta": {
+    "t": "INTA EEA Balcarce",
+    "u": "https://inta.gob.ar/balcarce"
+   }
+  },
+  {
+   "id": "pampa-semiarida",
+   "nombre": "Pampa Semiárida",
+   "provincias": "Oeste de Buenos Aires, este de La Pampa y sur de Córdoba",
+   "altitud": "Aprox. 100 a 400 msnm",
+   "clima": "Semiárido, con lluvias de 500 a 700 mm que disminuyen hacia el oeste, alta variabilidad entre años y vientos frecuentes.",
+   "suelo": "Suelos franco-arenosos (haplustoles) de menor retención de agua y baja materia orgánica, con tosca a profundidad variable; erosión eólica severa si quedan descubiertos.",
+   "peligros": [
+    "Sequías",
+    "Erosión eólica",
+    "Heladas tardías",
+    "Granizo",
+    "Baja retención de agua"
+   ],
+   "inta": {
+    "t": "INTA EEA Anguil",
+    "u": "https://inta.gob.ar/anguil"
+   }
+  },
+  {
+   "id": "caldenal",
+   "nombre": "Caldenal y Monte (oeste de La Pampa)",
+   "provincias": "Oeste de La Pampa",
+   "altitud": "Aprox. 200 a 500 msnm",
+   "clima": "Semiárido a árido, con lluvias de 300 a 500 mm muy variables, inviernos fríos, veranos cálidos y vientos fuertes.",
+   "suelo": "Suelos arenosos o franco-arenosos con tosca y poca materia orgánica; gran vulnerabilidad a la erosión eólica. La aptitud es principalmente ganadera.",
+   "peligros": [
+    "Sequías frecuentes",
+    "Erosión eólica severa",
+    "Incendios de pastizales y bosque",
+    "Heladas tardías",
+    "Desertificación por sobrepastoreo"
+   ],
+   "inta": {
+    "t": "INTA EEA Anguil",
+    "u": "https://inta.gob.ar/anguil"
+   }
+  },
+  {
+   "id": "chaco-humedo-sf",
+   "nombre": "Chaco Húmedo (norte de Santa Fe)",
+   "provincias": "Norte de Santa Fe",
+   "altitud": "Aprox. 50 a 100 msnm",
+   "clima": "Subtropical a templado cálido, con lluvias de 900 a 1.100 mm concentradas en verano y calor intenso.",
+   "suelo": "Suelos de textura media a pesada con drenaje deficiente y sodicidad o salinidad en los Bajos Submeridionales (agricultura limitada); mejores suelos en las lomas.",
+   "peligros": [
+    "Inundaciones",
+    "Sequías",
+    "Suelos salino-sódicos en los bajos",
+    "Calor extremo",
+    "Granizo"
+   ],
+   "inta": {
+    "t": "INTA EEA Reconquista",
+    "u": "https://inta.gob.ar/reconquista"
+   }
+  },
+  {
+   "id": "chaco-arido-cba",
+   "nombre": "Chaco Árido (norte de Córdoba)",
+   "provincias": "Norte y noroeste de Córdoba",
+   "altitud": "Aprox. 200 a 600 msnm",
+   "clima": "Semiárido, con lluvias de 400 a 650 mm de verano, mucha variabilidad y temperaturas altas.",
+   "suelo": "Suelos de textura franca a franco-limosa, susceptibles a erosión hídrica y eólica; salinización en áreas bajas.",
+   "peligros": [
+    "Sequía",
+    "Erosión hídrica y eólica",
+    "Calor extremo",
+    "Salinidad",
+    "Heladas tardías"
+   ],
+   "inta": {
+    "t": "INTA EEA Manfredi",
+    "u": "https://inta.gob.ar/manfredi"
+   }
+  },
+  {
+   "id": "sierras-cordoba",
+   "nombre": "Sierras de Córdoba",
+   "provincias": "Sierras Chicas, Grandes y del Norte de Córdoba",
+   "altitud": "Aprox. 500 a 2.700 msnm",
+   "clima": "Templado serrano, con lluvias de 600 a 900 mm; heladas en invierno y más frescura con la altura.",
+   "suelo": "Suelos someros y pedregosos, con afloramientos rocosos y pendiente; aptos para forraje y ganadería extensiva. La agricultura se concentra en los valles (Traslasierra, Punilla).",
+   "peligros": [
+    "Erosión hídrica por pendiente",
+    "Incendios",
+    "Heladas",
+    "Aluviones y crecidas",
+    "Granizo"
+   ],
+   "inta": {
+    "t": "INTA EEA Manfredi",
+    "u": "https://inta.gob.ar/manfredi"
+   }
+  },
+  {
+   "id": "mesopotamia-er",
+   "nombre": "Mesopotamia – Entre Ríos (Espinal y lomadas)",
+   "provincias": "Entre Ríos",
+   "altitud": "Aprox. 10 a 150 msnm",
+   "clima": "Templado húmedo a subtropical, con lluvias de 900 a 1.300 mm; veranos cálidos e inviernos suaves con heladas ocasionales.",
+   "suelo": "Vertisoles y molisoles arcillosos en el centro-sur, y suelos arenosos o arcillo-limosos en el este y noreste; en general mal drenados y susceptibles a erosión en lomadas.",
+   "peligros": [
+    "Anegamiento",
+    "Erosión hídrica",
+    "Sequías estivales ocasionales",
+    "Heladas que afectan a los cítricos",
+    "Granizo"
+   ],
+   "inta": {
+    "t": "INTA EEA Paraná",
+    "u": "https://inta.gob.ar/parana"
+   }
+  }
+ ],
+ "cultivos": [
+  {
+   "id": "soja",
+   "nombre": "Soja",
+   "aliases": [
+    "soja",
+    "soya",
+    "glycine max"
+   ],
+   "tipo": "Oleaginosa estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     10,
+     11,
+     12
+    ],
+    "texto": "Octubre a diciembre (soja de primera); soja de segunda en diciembre–enero, después de trigo o cebada."
+   },
+   "clima": "Temperatura óptima de 20 a 30 °C; sensible a heladas en emergencia y a calor o sequía en floración y llenado de granos.",
+   "agua": "Requiere aprox. 450 a 700 mm durante el ciclo; los períodos críticos son floración y llenado de granos.",
+   "plagas": [
+    {
+     "n": "Chinches (Nezara viridula, Piezodorus guildinii)",
+     "d": "Dañan vainas y granos durante el llenado; monitorear desde R3 según umbrales."
+    },
+    {
+     "n": "Orugas defoliadoras (Anticarsia gemmatalis, Rachiplusia nu)",
+     "d": "Consumen follaje; controlar solo al superar los umbrales de daño."
+    },
+    {
+     "n": "Roya asiática (Phakopsora pachyrhizi)",
+     "d": "Favorecida por humedad y temperaturas templadas; puede causar defoliación severa."
+    },
+    {
+     "n": "Enfermedades de fin de ciclo y mancha ojo de rana",
+     "d": "Frecuentes en años lluviosos; la rotación y el monitoreo ayudan a decidir el uso de fungicidas."
+    }
+   ],
+   "peligros": [
+    "Déficit hídrico en floración y llenado",
+    "Heladas tempranas o tardías",
+    "Granizo",
+    "Anegamiento en suelos mal drenados"
+   ],
+   "recomendaciones": [
+    "Elegir grupo de madurez según latitud y fecha de siembra.",
+    "Rotar con gramíneas (maíz, trigo) para sanidad y cobertura del suelo.",
+    "Monitorear plagas y enfermedades y usar umbrales de daño."
+   ],
+   "aptitud": {
+    "pampa-ondulada": [
+     "alta",
+     "Cultivo de referencia de la región con muy alto potencial."
+    ],
+    "pampa-llana": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "pampa-deprimida": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-austral": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-semiarida": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "caldenal": [
+     "baja",
+     "Poco recomendable por la baja disponibilidad de agua y los suelos arenosos."
+    ],
+    "chaco-humedo-sf": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "chaco-arido-cba": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "sierras-cordoba": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "mesopotamia-er": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "maiz",
+   "nombre": "Maíz",
+   "aliases": [
+    "maiz",
+    "maíz",
+    "choclo",
+    "zea mays"
+   ],
+   "tipo": "Cereal estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     9,
+     10,
+     11,
+     12
+    ],
+    "texto": "Siembras tempranas de septiembre a octubre y tardías de noviembre a diciembre."
+   },
+   "clima": "Temperatura óptima de 20 a 30 °C; evitar que la floración coincida con calor extremo (>35 °C).",
+   "agua": "Requiere aprox. 500 a 700 mm; el período crítico es alrededor de la floración.",
+   "plagas": [
+    {
+     "n": "Chicharrita del maíz (Dalbulus maidis) y achaparramiento",
+     "d": "Transmite espiroplasma/fitoplasma; las siembras tardías tienen mayor presión. Considerar híbridos tolerantes."
+    },
+    {
+     "n": "Cogollero (Spodoptera frugiperda)",
+     "d": "Ataca cogollo y espiga; monitorear desde la emergencia."
+    },
+    {
+     "n": "Barrenador del tallo (Diatraea saccharalis)",
+     "d": "Daño en tallo y espiga; favorece el vuelco."
+    },
+    {
+     "n": "Royas y tizón foliar (Exserohilum turcicum)",
+     "d": "Más frecuentes con humedad y temperaturas templadas."
+    },
+    {
+     "n": "Podredumbre de espiga y micotoxinas",
+     "d": "Asociadas a lluvias en madurez y daño de insectos."
+    }
+   ],
+   "peligros": [
+    "Estrés hídrico y golpe de calor en floración",
+    "Vuelco por vientos",
+    "Granizo",
+    "Heladas tempranas en siembras muy tardías"
+   ],
+   "recomendaciones": [
+    "Elegir híbridos adaptados a la zona y a la fecha de siembra.",
+    "Planificar la siembra para que la floración no coincida con el momento más caluroso o seco.",
+    "Rotar con soja u otra leguminosa para balancear nutrientes."
+   ],
+   "aptitud": {
+    "pampa-ondulada": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "pampa-llana": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "pampa-deprimida": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-austral": [
+     "alta",
+     "Muy buenos rendimientos por el ciclo más largo y las temperaturas frescas."
+    ],
+    "pampa-semiarida": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "caldenal": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "chaco-humedo-sf": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-arido-cba": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "sierras-cordoba": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "mesopotamia-er": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "trigo",
+   "nombre": "Trigo",
+   "aliases": [
+    "trigo",
+    "triticum"
+   ],
+   "tipo": "Cereal invernal",
+   "estacion": "Otoño–invierno (cultivo invernal)",
+   "siembra": {
+    "meses": [
+     5,
+     6,
+     7
+    ],
+    "texto": "Mayo a julio, con ciclos largos primero y cortos hacia fines de julio."
+   },
+   "clima": "Crece con 10 a 22 °C y necesita frío invernal; sensible a heladas en espigazón y a calor en llenado.",
+   "agua": "Requiere aprox. 350 a 550 mm; cuidar el balance hídrico en encañazón y llenado de granos.",
+   "plagas": [
+    {
+     "n": "Royas de la hoja y amarilla (Puccinia triticina, P. striiformis)",
+     "d": "Favorecidas por humedad y temperaturas templadas; elegir cultivares con buena resistencia."
+    },
+    {
+     "n": "Fusariosis de la espiga (Fusarium graminearum)",
+     "d": "Favorecida por lluvias en floración; riesgo de micotoxinas (DON)."
+    },
+    {
+     "n": "Mancha amarilla y septoriosis",
+     "d": "Enfermedades foliares de rastrojo; la rotación reduce la presión."
+    },
+    {
+     "n": "Pulgones y virus del enanismo amarillo de la cebada",
+     "d": "Los pulgones transmiten virus; monitorear en macollaje."
+    }
+   ],
+   "peligros": [
+    "Heladas en espigazón y floración",
+    "Estrés hídrico o calor en llenado",
+    "Granizo",
+    "Vuelco"
+   ],
+   "recomendaciones": [
+    "Elegir cultivares de ciclo adecuado a la fecha de siembra.",
+    "Monitorear enfermedades foliares y decidir fungicidas según umbral.",
+    "Evitar que la floración coincida con heladas tardías."
+   ],
+   "aptitud": {
+    "pampa-ondulada": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "pampa-llana": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "pampa-deprimida": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-austral": [
+     "alta",
+     "Zona triguera de alto rendimiento por el llenado prolongado."
+    ],
+    "pampa-semiarida": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "caldenal": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-humedo-sf": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-arido-cba": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "sierras-cordoba": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "mesopotamia-er": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ]
+   },
+   "siembraZona": {
+    "pampa-austral": {
+     "meses": [
+      6,
+      7
+     ],
+     "texto": "Junio a julio; ciclos largos desde fines de mayo."
+    }
+   }
+  },
+  {
+   "id": "girasol",
+   "nombre": "Girasol",
+   "aliases": [
+    "girasol",
+    "helianthus"
+   ],
+   "tipo": "Oleaginosa estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     9,
+     10,
+     11
+    ],
+    "texto": "Septiembre a noviembre; en las zonas más secas puede sembrarse hasta fines de noviembre."
+   },
+   "clima": "Óptimo de 20 a 28 °C; tolera sequía moderada, pero es sensible a heladas en estadios iniciales.",
+   "agua": "Requiere aprox. 300 a 600 mm; la floración y el llenado son los momentos críticos.",
+   "plagas": [
+    {
+     "n": "Podredumbre blanca del capítulo (Sclerotinia)",
+     "d": "Favorecida por lluvias y humedad en floración y llenado."
+    },
+    {
+     "n": "Mancha negra del tallo (Phoma) y tizón por Alternaria",
+     "d": "Pueden adelantar la madurez y reducir el rendimiento."
+    },
+    {
+     "n": "Orugas y chinches",
+     "d": "Orugas defoliadoras y chinches pueden dañar plántulas, hojas y capítulos."
+    },
+    {
+     "n": "Aves (palomas, cotorras)",
+     "d": "Dañan capítulos durante la madurez; en lotes grandes pueden causar pérdidas importantes."
+    }
+   ],
+   "peligros": [
+    "Granizo",
+    "Vuelco por viento en fin de ciclo",
+    "Heladas en emergencia",
+    "Lluvias en cosecha (podredumbre del capítulo)"
+   ],
+   "recomendaciones": [
+    "Elegir híbridos con tolerancia a enfermedades y ciclo adecuado.",
+    "Evitar rotaciones muy cortas con girasol, soja o colza (Sclerotinia).",
+    "Planificar la cosecha para evitar pérdidas por aves y lluvias."
+   ],
+   "aptitud": {
+    "pampa-ondulada": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-llana": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "pampa-deprimida": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "pampa-austral": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "pampa-semiarida": [
+     "alta",
+     "Buena adaptación a suelos livianos y a déficit hídrico moderado."
+    ],
+    "caldenal": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-humedo-sf": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-arido-cba": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "sierras-cordoba": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "mesopotamia-er": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "cebada",
+   "nombre": "Cebada",
+   "aliases": [
+    "cebada",
+    "hordeum"
+   ],
+   "tipo": "Cereal invernal",
+   "estacion": "Otoño–invierno (cultivo invernal)",
+   "siembra": {
+    "meses": [
+     6,
+     7
+    ],
+    "texto": "Junio a julio."
+   },
+   "clima": "Prospera con 8 a 20 °C; ciclo más corto que el trigo; sensible a calor en llenado.",
+   "agua": "Requiere aprox. 300 a 450 mm; sensible al déficit durante llenado.",
+   "plagas": [
+    {
+     "n": "Escaldadura (Rhynchosporium secalis)",
+     "d": "Mancha foliar favorecida por humedad y temperaturas frescas."
+    },
+    {
+     "n": "Mancha en red (Pyrenophora teres)",
+     "d": "Reduce el área foliar; más frecuente con rastrojo infectado."
+    },
+    {
+     "n": "Roya de la hoja (Puccinia hordei)",
+     "d": "Se favorece con humedad y temperaturas templadas."
+    },
+    {
+     "n": "Pulgones y virus del enanismo amarillo",
+     "d": "Transmiten virus; monitorear en macollaje."
+    }
+   ],
+   "peligros": [
+    "Heladas en espigazón",
+    "Estrés hídrico o calor en llenado",
+    "Exceso de nitrógeno (eleva la proteína y baja la calidad cervecera)",
+    "Granizo"
+   ],
+   "recomendaciones": [
+    "Elegir cultivares según destino (cervecera o forrajera).",
+    "Ajustar la fertilización nitrogenada para cuidar la calidad.",
+    "Monitorear enfermedades foliares."
+   ],
+   "aptitud": {
+    "pampa-ondulada": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "pampa-llana": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "pampa-deprimida": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-austral": [
+     "alta",
+     "Zona de referencia para cebada cervecera por su calidad y rendimiento."
+    ],
+    "pampa-semiarida": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "caldenal": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "chaco-humedo-sf": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "chaco-arido-cba": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "sierras-cordoba": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "mesopotamia-er": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "sorgo",
+   "nombre": "Sorgo",
+   "aliases": [
+    "sorgo",
+    "sorghum"
+   ],
+   "tipo": "Cereal estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     10,
+     11,
+     12
+    ],
+    "texto": "Octubre a diciembre."
+   },
+   "clima": "Óptimo de 25 a 30 °C; soporta bien el calor y la sequía, pero es sensible a heladas.",
+   "agua": "Requiere aprox. 400 a 550 mm; tolera sequías mejor que el maíz.",
+   "plagas": [
+    {
+     "n": "Pulgón amarillo (Melanaphis sacchari) y pulgón verde",
+     "d": "Debilitan la planta y reducen el rendimiento; monitorear desde macollaje."
+    },
+    {
+     "n": "Mosquita del sorgo (Contarinia sorghicola)",
+     "d": "Daña flores y reduce el llenado de la panoja."
+    },
+    {
+     "n": "Aves granívoras",
+     "d": "Provocan pérdidas importantes en madurez."
+    },
+    {
+     "n": "Cornezuelo y enfermedades foliares",
+     "d": "Más frecuentes con humedad alta en floración."
+    }
+   ],
+   "peligros": [
+    "Heladas tempranas",
+    "Vuelco",
+    "Sequía severa en panojamiento",
+    "Anegamiento"
+   ],
+   "recomendaciones": [
+    "Sembrar con suelo ya templado.",
+    "Elegir híbridos según destino (grano, forraje, silo).",
+    "Controlar malezas en los primeros estadios."
+   ],
+   "aptitud": {
+    "pampa-ondulada": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-llana": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-deprimida": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-austral": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "pampa-semiarida": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "caldenal": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-humedo-sf": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-arido-cba": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "sierras-cordoba": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "mesopotamia-er": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "mani",
+   "nombre": "Maní",
+   "aliases": [
+    "mani",
+    "maní",
+    "cacahuate",
+    "arachis hypogaea"
+   ],
+   "tipo": "Oleaginosa estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     10,
+     11
+    ],
+    "texto": "Octubre a noviembre, con el suelo ya templado."
+   },
+   "clima": "Cálido, con 22 a 30 °C; prefiere suelos sueltos y arenosos que faciliten la penetración de los ginóforos.",
+   "agua": "Requiere aprox. 500 a 700 mm bien distribuidos; crítico en floración y fructificación.",
+   "plagas": [
+    {
+     "n": "Carbón del maní (Thecaphora frezii)",
+     "d": "Enfermedad clave en la zona manisera de Córdoba; la rotación y la semilla sana son fundamentales."
+    },
+    {
+     "n": "Manchas foliares (Cercospora, Nothopassalora personata)",
+     "d": "Defolian la planta; se manejan con rotación y fungicidas según monitoreo."
+    },
+    {
+     "n": "Podredumbre del tallo (Sclerotium rolfsii)",
+     "d": "Más frecuente con humedad alta y rastrojo sin descomponer."
+    },
+    {
+     "n": "Trips, arañuelas y orugas",
+     "d": "Pueden afectar el cultivo en épocas secas y calurosas."
+    }
+   ],
+   "peligros": [
+    "Sequía durante fructificación",
+    "Anegamiento y suelos compactados",
+    "Granizo",
+    "Lluvias en arrancado y secado"
+   ],
+   "recomendaciones": [
+    "Elegir lotes arenosos y bien drenados.",
+    "Rotar con gramíneas; evitar cultivos consecutivos de maní.",
+    "Usar semilla sana y tratada."
+   ],
+   "aptitud": {
+    "pampa-ondulada": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "pampa-llana": [
+     "alta",
+     "El sur de Córdoba concentra la mayor parte del maní argentino, sobre suelos arenosos."
+    ],
+    "pampa-deprimida": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "pampa-austral": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "pampa-semiarida": [
+     "alta",
+     "Zona manisera tradicional; con rotación para evitar el carbón del maní."
+    ],
+    "caldenal": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-humedo-sf": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "chaco-arido-cba": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "sierras-cordoba": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "mesopotamia-er": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "alfalfa",
+   "nombre": "Alfalfa",
+   "aliases": [
+    "alfalfa",
+    "medicago sativa"
+   ],
+   "tipo": "Forrajera perenne",
+   "estacion": "Todo el año (implantación en otoño o primavera temprana)",
+   "siembra": {
+    "meses": [
+     3,
+     4,
+     5,
+     9,
+     10
+    ],
+    "texto": "Otoño (marzo–mayo) y primavera temprana (septiembre–octubre)."
+   },
+   "clima": "Perenne; tolera frío invernal y calor, óptimo de 15 a 25 °C; sensible al encharcamiento.",
+   "agua": "Alta demanda (aprox. 800 a 1.200 mm por año); en zonas áridas se maneja bajo riego.",
+   "plagas": [
+    {
+     "n": "Pulgones (azul, moteado y verde)",
+     "d": "Debilitan la planta y reducen la calidad; monitorear tras cada corte."
+    },
+    {
+     "n": "Isoca de la alfalfa (Colias lesbia)",
+     "d": "Defolia el cultivo en brotes de primavera y verano."
+    },
+    {
+     "n": "Podredumbres de raíz y corona (Phytophthora, Fusarium)",
+     "d": "Más frecuentes con anegamiento y suelos mal drenados."
+    },
+    {
+     "n": "Cuscuta (maleza parásita)",
+     "d": "Se evita con semilla certificada libre de cuscuta."
+    }
+   ],
+   "peligros": [
+    "Anegamiento",
+    "Sequía sin riego",
+    "Salinidad",
+    "Heladas tardías en rebrote"
+   ],
+   "recomendaciones": [
+    "Elegir grupo de reposo invernal según la zona.",
+    "Cortar con 10% de floración para cuidar calidad y persistencia.",
+    "Implantar en lotes nivelados y con semilla certificada."
+   ],
+   "aptitud": {
+    "pampa-ondulada": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "pampa-llana": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "pampa-deprimida": [
+     "media",
+     "Menor persistencia por anegamiento; suelen preferirse festuca y pasturas tolerantes."
+    ],
+    "pampa-austral": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-semiarida": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "caldenal": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-humedo-sf": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-arido-cba": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "sierras-cordoba": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "mesopotamia-er": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "papa",
+   "nombre": "Papa",
+   "aliases": [
+    "papa",
+    "patata",
+    "solanum tuberosum"
+   ],
+   "tipo": "Hortaliza de tubérculo",
+   "estacion": "Primavera–verano (siembra según zona)",
+   "siembra": {
+    "meses": [
+     9,
+     10,
+     11
+    ],
+    "texto": "Siembra de septiembre a noviembre en el sudeste bonaerense; papa temprana en Córdoba en agosto–septiembre."
+   },
+   "clima": "Óptimo de 15 a 20 °C; la tuberización se frena por encima de 25 °C; sensible a heladas.",
+   "agua": "Requiere aprox. 500 a 700 mm bien distribuidos; riego en zonas secas.",
+   "plagas": [
+    {
+     "n": "Tizón tardío (Phytophthora infestans)",
+     "d": "Muy dañino con humedad y temperaturas templadas; monitorear y proteger preventivamente."
+    },
+    {
+     "n": "Tizón temprano (Alternaria solani)",
+     "d": "Más frecuente en cultivos estresados o con calor."
+    },
+    {
+     "n": "Virus (PVY, PLRV) y pulgones",
+     "d": "Se transmiten por pulgones y semilla infectada."
+    },
+    {
+     "n": "Polilla de la papa (Phthorimaea operculella) y plagas del suelo",
+     "d": "Dañan tubérculos en campo y almacenamiento; también gusanos de alambre y nematodos."
+    }
+   ],
+   "peligros": [
+    "Heladas",
+    "Calor excesivo en tuberización",
+    "Encharcamiento",
+    "Granizo"
+   ],
+   "recomendaciones": [
+    "Usar semilla certificada.",
+    "Rotar 3 o 4 años con gramíneas para evitar enfermedades del suelo.",
+    "Monitorear tizón en períodos húmedos."
+   ],
+   "aptitud": {
+    "pampa-ondulada": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-llana": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-deprimida": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "pampa-austral": [
+     "alta",
+     "Principal zona papera (Balcarce y alrededores), de gran aptitud por la frescura."
+    ],
+    "pampa-semiarida": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "caldenal": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "chaco-humedo-sf": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "chaco-arido-cba": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "sierras-cordoba": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "mesopotamia-er": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "colza",
+   "nombre": "Colza",
+   "aliases": [
+    "colza",
+    "canola",
+    "brassica napus"
+   ],
+   "tipo": "Oleaginosa invernal",
+   "estacion": "Otoño–invierno (cultivo invernal)",
+   "siembra": {
+    "meses": [
+     5,
+     6,
+     7
+    ],
+    "texto": "Mayo a julio."
+   },
+   "clima": "Crece entre 5 y 20 °C; sensible a heladas en floración y a calor en llenado.",
+   "agua": "Requiere aprox. 350 a 500 mm; crítico en floración.",
+   "plagas": [
+    {
+     "n": "Pulgón de la colza (Brevicoryne brassicae)",
+     "d": "Colonias en inflorescencias; monitorear en floración."
+    },
+    {
+     "n": "Cancro del tallo (Leptosphaeria maculans)",
+     "d": "Enfermedad importante en lotes con rastrojo de colza; rotar."
+    },
+    {
+     "n": "Sclerotinia",
+     "d": "Favorecida por humedad en floración."
+    },
+    {
+     "n": "Babosas e isocas",
+     "d": "Pueden afectar la implantación y las plántulas."
+    }
+   ],
+   "peligros": [
+    "Heladas en floración",
+    "Desgrane (dehiscencia de silicuas)",
+    "Sequía",
+    "Anegamiento"
+   ],
+   "recomendaciones": [
+    "Evitar colza sobre colza.",
+    "Cosechar en el momento oportuno para evitar desgrane.",
+    "Elegir fecha para que la floración no coincida con heladas."
+   ],
+   "aptitud": {
+    "pampa-ondulada": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-llana": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-deprimida": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "pampa-austral": [
+     "alta",
+     "Muy buenos resultados como cultivo invernal alternativo."
+    ],
+    "pampa-semiarida": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "caldenal": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "chaco-humedo-sf": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "chaco-arido-cba": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "sierras-cordoba": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "mesopotamia-er": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "arroz",
+   "nombre": "Arroz",
+   "aliases": [
+    "arroz",
+    "oryza sativa"
+   ],
+   "tipo": "Cereal estival bajo riego",
+   "estacion": "Primavera–verano (cultivo estival con riego)",
+   "siembra": {
+    "meses": [
+     9,
+     10,
+     11
+    ],
+    "texto": "Septiembre a noviembre, con riego por inundación."
+   },
+   "clima": "Cálido, con 25 a 30 °C; sensible al frío en floración (menos de 15–17 °C).",
+   "agua": "Demanda muy alta: se cultiva con riego por inundación y requiere agua disponible durante todo el ciclo.",
+   "plagas": [
+    {
+     "n": "Brusone (Pyricularia oryzae)",
+     "d": "Principal enfermedad; favorecida por exceso de nitrógeno y noches húmedas."
+    },
+    {
+     "n": "Mancha parda y añublo de la vaina (Rhizoctonia)",
+     "d": "Afectan hojas y vainas en cultivos densos."
+    },
+    {
+     "n": "Gorgojo acuático (Oryzophagus oryzae) y chinche del arroz",
+     "d": "Dañan raíces, tallos y panojas."
+    },
+    {
+     "n": "Arroz colorado y malezas",
+     "d": "Maleza muy competitiva que baja la calidad del grano."
+    }
+   ],
+   "peligros": [
+    "Frío en floración",
+    "Falta de agua de riego",
+    "Vuelco",
+    "Salinidad"
+   ],
+   "recomendaciones": [
+    "Contar con riego asegurado antes de sembrar.",
+    "Elegir cultivares de ciclo adecuado y tolerantes a brusone.",
+    "Nivelar bien el lote y manejar el nitrógeno."
+   ],
+   "aptitud": {
+    "pampa-ondulada": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "pampa-llana": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "pampa-deprimida": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "pampa-austral": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "pampa-semiarida": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "caldenal": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "chaco-humedo-sf": [
+     "media",
+     "Se cultiva en áreas puntuales del norte de Santa Fe con riego."
+    ],
+    "chaco-arido-cba": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "sierras-cordoba": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "mesopotamia-er": [
+     "alta",
+     "Zona arrocera importante, con agua disponible y suelos arcillosos."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "citricos",
+   "nombre": "Cítricos (limón, naranja, mandarina, pomelo)",
+   "aliases": [
+    "citricos",
+    "cítricos",
+    "limon",
+    "limón",
+    "naranja",
+    "mandarina",
+    "pomelo",
+    "citrus"
+   ],
+   "tipo": "Frutal perenne",
+   "estacion": "Todo el año (implantación en primavera u otoño)",
+   "siembra": {
+    "meses": [
+     8,
+     9,
+     10,
+     4
+    ],
+    "texto": "Plantación de fines de invierno a primavera o en otoño."
+   },
+   "clima": "Subtropical a templado cálido; sensibles a heladas, sobre todo los limoneros y plantas jóvenes.",
+   "agua": "Requiere aprox. 800 a 1.200 mm por año; riego complementario en zonas secas.",
+   "plagas": [
+    {
+     "n": "Cancrosis (Xanthomonas citri)",
+     "d": "Lesiones en hojas y frutos; se favorece por lluvia y viento."
+    },
+    {
+     "n": "Mancha negra de los cítricos (Phyllosticta citricarpa)",
+     "d": "Enfermedad cuarentenaria de importancia para exportación."
+    },
+    {
+     "n": "HLB / Huanglongbing y su vector (Diaphorina citri)",
+     "d": "Enfermedad grave de denuncia obligatoria ante SENASA."
+    },
+    {
+     "n": "Moscas de la fruta (Ceratitis capitata, Anastrepha fraterculus)",
+     "d": "Dañan frutos; se manejan con monitoreo y control regional."
+    },
+    {
+     "n": "Minador de la hoja (Phyllocnistis citrella)",
+     "d": "Daña brotes jóvenes."
+    }
+   ],
+   "peligros": [
+    "Heladas",
+    "Granizo",
+    "Vientos",
+    "Sequía o exceso de humedad"
+   ],
+   "recomendaciones": [
+    "Elegir portainjerto y variedad según clima y suelo.",
+    "Instalar cortinas rompevientos.",
+    "Monitorear plagas cuarentenarias y reportar sospechas a SENASA."
+   ],
+   "aptitud": {
+    "pampa-ondulada": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "pampa-llana": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "pampa-deprimida": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "pampa-austral": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "pampa-semiarida": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "caldenal": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "chaco-humedo-sf": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "chaco-arido-cba": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "sierras-cordoba": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "mesopotamia-er": [
+     "alta",
+     "Concordia y el noreste entrerriano son zonas citrícolas relevantes (naranja y mandarina)."
+    ]
+   },
+   "siembraZona": {}
+  }
+ ]
+}

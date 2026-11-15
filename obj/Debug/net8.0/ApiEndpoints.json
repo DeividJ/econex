@@ -1,0 +1,290 @@
+[
+  {
+    "ContainingType": "AgroAlerta.Services.AgroApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAgroApi\u003Eb__1_4",
+    "RelativePath": "api/alerts",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.AgroApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAgroApi\u003Eb__1_3",
+    "RelativePath": "api/analyses",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.AgroApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAgroApi\u003Eb__1_6",
+    "RelativePath": "api/chat",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "AgroAlerta.Services.AgroApi\u002BChatInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.EstacionesApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEstacionesApi\u003Eb__2_0",
+    "RelativePath": "api/estaciones/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.EstacionesApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEstacionesApi\u003Eb__2_1",
+    "RelativePath": "api/estaciones/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "AgroAlerta.Services.EstacionesApi\u002BCreateStationInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.EstacionesApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEstacionesApi\u003Eb__2_2",
+    "RelativePath": "api/estaciones/{id:int}/estado",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.EstacionesApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEstacionesApi\u003Eb__2_3",
+    "RelativePath": "api/estaciones/{id:int}/lecturas",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "input",
+        "Type": "AgroAlerta.Services.EstacionesApi\u002BWeatherReadingInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.AgroApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAgroApi\u003Eb__1_0",
+    "RelativePath": "api/parcels",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.AgroApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAgroApi\u003Eb__1_1",
+    "RelativePath": "api/parcels",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "AgroAlerta.Services.AgroApi\u002BParcelInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.AgroApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAgroApi\u003Eb__1_2",
+    "RelativePath": "api/parcels/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.AgroApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAgroApi\u003Eb__1_5",
+    "RelativePath": "api/risk/analyze",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "AgroAlerta.Services.AgroApi\u002BRiskInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.RotacionParcelasApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapRotacionParcelasApi\u003Eb__1_0",
+    "RelativePath": "api/rotacion/parcelas",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.RotacionParcelasApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapRotacionParcelasApi\u003Eb__1_1",
+    "RelativePath": "api/rotacion/parcelas",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "AgroAlerta.Services.RotacionParcelasApi\u002BRotacionParcelaInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgroAlerta.Services.RotacionParcelasApi\u002B\u003C\u003Ec",
+    "Method": "\u003CMapRotacionParcelasApi\u003Eb__1_2",
+    "RelativePath": "api/rotacion/parcelas/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "input",
+        "Type": "AgroAlerta.Services.RotacionParcelasApi\u002BRotacionParcelaUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

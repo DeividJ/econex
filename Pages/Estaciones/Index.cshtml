@@ -1,0 +1,94 @@
+@page
+@{
+    ViewData["Title"] = "Estación meteorológica";
+}
+<link rel="stylesheet" href="~/css/estaciones.css" asp-append-version="true" />
+
+<section class="station-heading">
+    <div>
+        <div class="eyebrow">AGROALERTA / MONITOREO</div>
+        <h1>Estación meteorológica</h1>
+        <p>Registrá estaciones Wi-Fi de distintas marcas, vinculalas a tus parcelas y verificá sus mediciones reales.</p>
+    </div>
+    <span class="station-heading-icon" aria-hidden="true">☁</span>
+</section>
+
+<div class="station-note">
+    <strong>¿Cómo se conectan?</strong>
+    <p>La estación debe poder enviar datos HTTP(S) a AgroAlerta o utilizar una pasarela local. Escribir la marca y el modelo no garantiza compatibilidad automática. La conexión se confirma <strong>solo después de recibir una lectura real reciente</strong>.</p>
+</div>
+
+<div class="station-grid">
+    <section class="station-panel" aria-labelledby="station-add-title">
+        <div class="station-panel-heading">
+            <h2 id="station-add-title">Agregar estación meteorológica</h2>
+            <p>Completá los datos de tu equipo.</p>
+        </div>
+        <form id="stationCreateForm" class="station-form">
+            <label for="stationName">Nombre de la estación</label>
+            <input id="stationName" maxlength="120" placeholder="Ej.: Estación campo norte" required />
+            <div class="station-two-col">
+                <div>
+                    <label for="stationBrand">Marca</label>
+                    <input id="stationBrand" list="stationBrands" maxlength="100" placeholder="Ej.: Ecowitt" required />
+                    <datalist id="stationBrands">
+                        <option value="Ecowitt"></option><option value="Ambient Weather"></option>
+                        <option value="Davis Instruments"></option><option value="Fine Offset"></option>
+                        <option value="Oregon Scientific"></option><option value="Otra"></option>
+                    </datalist>
+                </div>
+                <div>
+                    <label for="stationModel">Modelo</label>
+                    <input id="stationModel" maxlength="100" placeholder="Ej.: GW2000" required />
+                </div>
+            </div>
+            <label for="stationParcel">Asociar a una parcela (opcional)</label>
+            <select id="stationParcel"><option value="">Sin parcela asociada</option></select>
+            <label for="stationMode">Método de conexión</label>
+            <select id="stationMode">
+                <option value="directa">Envío directo HTTP(S) de la estación</option>
+                <option value="pasarela">Pasarela local (PC / Raspberry Pi / ESP32)</option>
+            </select>
+            <p id="stationModeHelp" class="station-hint">Elegí esta opción solo si el modelo permite configurar un servidor HTTP(S) personalizado y enviar JSON con una clave.</p>
+            <button type="submit" class="primary-button" id="stationSaveButton">Registrar estación</button>
+        </form>
+        <div id="stationFormMessage" class="station-feedback" role="alert" hidden></div>
+    </section>
+
+    <section class="station-panel" aria-labelledby="station-connect-title">
+        <div class="station-panel-heading">
+            <h2 id="station-connect-title">Configuración de conexión</h2>
+            <p>Estos datos aparecen cuando registrás una estación.</p>
+        </div>
+        <div id="stationSetupEmpty" class="station-empty">Registrá una estación para generar su dirección de recepción y su clave privada.</div>
+        <div id="stationSetup" hidden>
+            <div class="station-setup-warning">Guardá la clave ahora: se muestra una sola vez. No la publiques ni la compartas.</div>
+            <label for="stationEndpoint">Dirección para enviar las lecturas (POST)</label>
+            <div class="station-copy-row"><input id="stationEndpoint" readonly /><button type="button" class="station-outline" data-copy="stationEndpoint">Copiar</button></div>
+            <label for="stationKey">Clave privada (cabecera X-Station-Key)</label>
+            <div class="station-copy-row"><input id="stationKey" type="password" readonly /><button type="button" class="station-outline" id="stationShowKey">Mostrar</button><button type="button" class="station-outline" data-copy="stationKey">Copiar</button></div>
+            <p class="station-hint">Enviá una solicitud <strong>POST</strong> con <strong>Content-Type: application/json</strong> y la cabecera <strong>X-Station-Key</strong>. Ejemplo de cuerpo JSON:</p>
+            <pre class="station-json">{
+  "temperatureC": 29.5,
+  "humidityPct": 54,
+  "rainMm": 1.2,
+  "windKmh": 12,
+  "pressureHpa": 1008
+}</pre>
+            <p class="station-hint"><strong>Importante:</strong> si la URL contiene <code>localhost</code>, la estación ubicada en otro lugar no podrá acceder. Primero publicá AgroAlerta en un dominio HTTPS accesible desde Internet. Los equipos que no envían este formato necesitan un adaptador o pasarela.</p>
+        </div>
+    </section>
+</div>
+
+<section class="station-panel station-list-panel" aria-labelledby="station-list-title">
+    <div class="station-panel-heading station-list-heading">
+        <div><h2 id="station-list-title">Mis estaciones</h2><p>Verificá la conexión y consultá las últimas mediciones.</p></div>
+        <button type="button" class="station-outline" id="stationReload">Actualizar</button>
+    </div>
+    <div id="stationListMessage" class="station-feedback" role="alert" hidden></div>
+    <div id="stationList" class="station-list"><p class="station-empty">Cargando estaciones...</p></div>
+</section>
+
+@section Scripts {
+    <script src="~/js/estaciones.js" asp-append-version="true"></script>
+}

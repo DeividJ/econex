@@ -1,0 +1,945 @@
+{
+ "version": 1,
+ "region": {
+  "id": "patagonia",
+  "nombre": "Patagonia",
+  "provincias": "Neuquén, Río Negro, Chubut, Santa Cruz y Tierra del Fuego"
+ },
+ "aviso": "Base de referencia orientativa elaborada para AgroAlerta. No es una respuesta en tiempo real de una API del INTA: los valores deben validarse con la Estación Experimental del INTA de la zona.",
+ "fuentes": [
+  {
+   "t": "INTA EEA Alto Valle",
+   "u": "https://inta.gob.ar/altovalle"
+  },
+  {
+   "t": "INTA EEA Bariloche",
+   "u": "https://inta.gob.ar/bariloche"
+  },
+  {
+   "t": "INTA EEA Santa Cruz",
+   "u": "https://inta.gob.ar/santacruz"
+  },
+  {
+   "t": "GeoINTA – visor de mapas de suelos",
+   "u": "https://visor.geointa.inta.gob.ar/"
+  }
+ ],
+ "subregiones": [
+  {
+   "id": "valles-irrigados",
+   "nombre": "Valles irrigados (Alto Valle, Valle Medio/Inferior, Chubut)",
+   "provincias": "Neuquén y Río Negro (Alto Valle, Valle Medio e Inferior), valles del Chubut y Los Antiguos (Santa Cruz)",
+   "altitud": "Aprox. 0 a 400 msnm",
+   "clima": "Árido a semiárido (menos de 300 mm), con vientos fuertes del oeste, veranos cálidos y secos, inviernos fríos y heladas de primavera frecuentes.",
+   "suelo": "Suelos aluviales de textura franco-arenosa a franco-arcillosa, de muy buena aptitud con riego; riesgo de salinización y mal drenaje.",
+   "peligros": [
+    "Heladas tardías de primavera y tempranas de otoño",
+    "Granizo",
+    "Viento",
+    "Salinización y problemas de drenaje",
+    "Escasez de agua o crecidas del río"
+   ],
+   "inta": {
+    "t": "INTA EEA Alto Valle",
+    "u": "https://inta.gob.ar/altovalle"
+   }
+  },
+  {
+   "id": "estepa",
+   "nombre": "Estepa patagónica y Monte",
+   "provincias": "Meseta patagónica (centro y este de Neuquén, Río Negro, Chubut y Santa Cruz)",
+   "altitud": "Aprox. 100 a 1.000 msnm",
+   "clima": "Árido, con lluvias de 100 a 250 mm, vientos intensos y permanentes, grandes amplitudes térmicas e inviernos fríos.",
+   "suelo": "Suelos arenosos, someros y con carbonatos, muy pobres en materia orgánica y muy susceptibles a la erosión eólica; aptitud ganadera ovina extensiva y agricultura solo con riego.",
+   "peligros": [
+    "Falta de agua",
+    "Viento y erosión eólica",
+    "Heladas",
+    "Nevadas fuertes y sequías que afectan al ganado",
+    "Desertificación"
+   ],
+   "inta": {
+    "t": "INTA EEA Bariloche",
+    "u": "https://inta.gob.ar/bariloche"
+   }
+  },
+  {
+   "id": "cordillera",
+   "nombre": "Cordillera y bosques andino-patagónicos",
+   "provincias": "Faja andina de Neuquén a Santa Cruz (Comarca Andina, El Bolsón, Esquel, Trevelin)",
+   "altitud": "Aprox. 200 a 1.500 msnm",
+   "clima": "Templado frío a frío húmedo, con lluvias de 600 a más de 2.000 mm en el sector andino, inviernos con nieve y veranos frescos.",
+   "suelo": "Suelos derivados de ceniza volcánica (andisoles) y suelos de bosque, bien estructurados y con buena retención de agua en el oeste; pedregosos en laderas.",
+   "peligros": [
+    "Heladas tardías",
+    "Nevadas",
+    "Incendios forestales",
+    "Erosión en laderas",
+    "Viento y lluvia en cosecha"
+   ],
+   "inta": {
+    "t": "INTA EEA Bariloche",
+    "u": "https://inta.gob.ar/bariloche"
+   }
+  },
+  {
+   "id": "fueguina",
+   "nombre": "Tierra del Fuego (estepa y bosque fueguino)",
+   "provincias": "Tierra del Fuego",
+   "altitud": "Aprox. 0 a 1.000 msnm",
+   "clima": "Frío oceánico, con lluvias de 300 a 700 mm (más en el sur), veranos cortos y frescos, vientos persistentes y heladas casi todo el año.",
+   "suelo": "Suelos orgánicos y de turba, ácidos y mal drenados en el sur; suelos arenosos, pedregosos y de estepa en el norte, aptos para pasturas y ganadería ovina.",
+   "peligros": [
+    "Heladas casi todo el año",
+    "Viento",
+    "Temporada de crecimiento muy corta",
+    "Suelos ácidos y anegados",
+    "Nevadas"
+   ],
+   "inta": {
+    "t": "INTA EEA Santa Cruz",
+    "u": "https://inta.gob.ar/santacruz"
+   }
+  }
+ ],
+ "cultivos": [
+  {
+   "id": "manzana",
+   "nombre": "Manzana",
+   "aliases": [
+    "manzana",
+    "manzano",
+    "malus domestica"
+   ],
+   "tipo": "Frutal de pepita",
+   "estacion": "Todo el año (plantación en reposo invernal)",
+   "siembra": {
+    "meses": [
+     7,
+     8,
+     9
+    ],
+    "texto": "Plantación a raíz desnuda de fines de invierno a inicios de primavera (julio–septiembre), con riego y defensa antihelada."
+   },
+   "clima": "Templado frío, con horas de frío invernal y verano cálido y soleado; sensible a heladas primaverales.",
+   "agua": "Riego obligatorio en valles (lluvias menores a 300 mm); aprox. 800 a 1.000 mm de demanda anual.",
+   "plagas": [
+    {
+     "n": "Carpocapsa (Cydia pomonella)",
+     "d": "Plaga principal; se maneja con confusión sexual y monitoreo."
+    },
+    {
+     "n": "Sarna del manzano (Venturia inaequalis)",
+     "d": "Manchas en hojas y frutos con lluvias primaverales."
+    },
+    {
+     "n": "Pulgón lanígero (Eriosoma lanigerum)",
+     "d": "Debilita ramas y deforma brotes."
+    },
+    {
+     "n": "Fuego bacteriano (Erwinia amylovora)",
+     "d": "Enfermedad grave de manejo regulado; ante sospechas, avisar a SENASA."
+    }
+   ],
+   "peligros": [
+    "Heladas primaverales",
+    "Granizo",
+    "Viento",
+    "Lluvias y golpe de calor en cosecha"
+   ],
+   "recomendaciones": [
+    "Contar con defensa antihelada y red antigranizo.",
+    "Elegir portainjerto y variedad según zona.",
+    "Mantener cortinas rompevientos."
+   ],
+   "aptitud": {
+    "valles-irrigados": [
+     "alta",
+     "El Alto Valle es la principal zona manzanera del país."
+    ],
+    "estepa": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "cordillera": [
+     "media",
+     "Producción menor, con riesgo de heladas tardías y menor calibre."
+    ],
+    "fueguina": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "pera",
+   "nombre": "Pera",
+   "aliases": [
+    "pera",
+    "peral",
+    "pyrus"
+   ],
+   "tipo": "Frutal de pepita",
+   "estacion": "Todo el año (plantación en reposo invernal)",
+   "siembra": {
+    "meses": [
+     7,
+     8,
+     9
+    ],
+    "texto": "Plantación a raíz desnuda de julio a septiembre, con riego y defensa antihelada."
+   },
+   "clima": "Templado frío; requiere frío invernal; sensible a heladas en floración.",
+   "agua": "Riego obligatorio en valles; aprox. 800 a 1.000 mm de demanda anual.",
+   "plagas": [
+    {
+     "n": "Carpocapsa (Cydia pomonella)",
+     "d": "Principal plaga del fruto."
+    },
+    {
+     "n": "Psila del peral (Cacopsylla pyricola)",
+     "d": "Debilita brotes y ensucia frutos."
+    },
+    {
+     "n": "Fuego bacteriano (Erwinia amylovora)",
+     "d": "Enfermedad grave de manejo regulado."
+    },
+    {
+     "n": "Sarna del peral (Venturia pirina)",
+     "d": "Manchas en hojas y frutos."
+    }
+   ],
+   "peligros": [
+    "Heladas primaverales",
+    "Granizo",
+    "Viento",
+    "Lluvias en cosecha"
+   ],
+   "recomendaciones": [
+    "Instalar defensa antihelada.",
+    "Aplicar manejo integrado y confusión sexual.",
+    "Elegir variedad y portainjerto según el sitio."
+   ],
+   "aptitud": {
+    "valles-irrigados": [
+     "alta",
+     "El Alto Valle es la principal zona productora de pera Williams y otras variedades."
+    ],
+    "estepa": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "cordillera": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "fueguina": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "cereza",
+   "nombre": "Cereza",
+   "aliases": [
+    "cereza",
+    "cerezo",
+    "prunus avium"
+   ],
+   "tipo": "Frutal de carozo",
+   "estacion": "Todo el año (plantación en reposo invernal)",
+   "siembra": {
+    "meses": [
+     7,
+     8,
+     9
+    ],
+    "texto": "Plantación en reposo invernal (julio–septiembre), con riego."
+   },
+   "clima": "Templado frío; requiere frío invernal; muy sensible a heladas en floración y a lluvias en madurez.",
+   "agua": "Riego en valles; demanda aprox. 600 a 800 mm por año.",
+   "plagas": [
+    {
+     "n": "Mosca de alas manchadas (Drosophila suzukii)",
+     "d": "Daña frutos maduros; requiere monitoreo."
+    },
+    {
+     "n": "Monilia y pudrición morena",
+     "d": "Con lluvias en floración y cosecha."
+    },
+    {
+     "n": "Pulgones y cochinillas",
+     "d": "Afectan brotes jóvenes."
+    },
+    {
+     "n": "Partidura del fruto (daño fisiológico)",
+     "d": "Ocurre cuando llueve cerca de la cosecha."
+    }
+   ],
+   "peligros": [
+    "Lluvias en madurez (partidura)",
+    "Heladas en floración",
+    "Granizo",
+    "Viento"
+   ],
+   "recomendaciones": [
+    "Elegir variedades de maduración ordenada.",
+    "Considerar coberturas contra lluvia.",
+    "Cosechar con cuidado y enfriar rápido."
+   ],
+   "aptitud": {
+    "valles-irrigados": [
+     "alta",
+     "Excelente aptitud en los valles del sur (Chubut, Los Antiguos) por su maduración tardía."
+    ],
+    "estepa": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "cordillera": [
+     "media",
+     "Posible en sitios protegidos; las lluvias en maduración pueden causar partidura."
+    ],
+    "fueguina": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "frutasfinas",
+   "nombre": "Frutas finas (frambuesa, frutilla, arándano, grosella)",
+   "aliases": [
+    "frutas finas",
+    "frambuesa",
+    "frutilla",
+    "fresa",
+    "arandano",
+    "arándano",
+    "grosella",
+    "zarzamora",
+    "berries"
+   ],
+   "tipo": "Frutales menores",
+   "estacion": "Primavera–verano (plantación en primavera)",
+   "siembra": {
+    "meses": [
+     8,
+     9,
+     10
+    ],
+    "texto": "Plantación en primavera (septiembre–octubre); en zonas más templadas, desde agosto."
+   },
+   "clima": "Templado frío a fresco con suelos ácidos y buen drenaje; sensibles a heladas tardías.",
+   "agua": "Requieren riego regular; aprox. 600 a 900 mm de demanda anual.",
+   "plagas": [
+    {
+     "n": "Mosca de alas manchadas (Drosophila suzukii)",
+     "d": "Plaga de frutos maduros."
+    },
+    {
+     "n": "Botrytis (moho gris)",
+     "d": "Favorecido por humedad y lluvias en cosecha."
+    },
+    {
+     "n": "Pulgones y ácaros",
+     "d": "Debilitan brotes y hojas."
+    },
+    {
+     "n": "Antracnosis y podredumbres de raíz",
+     "d": "Más frecuentes en suelos pesados."
+    }
+   ],
+   "peligros": [
+    "Heladas tardías",
+    "Lluvias en cosecha",
+    "Viento",
+    "Suelos mal drenados"
+   ],
+   "recomendaciones": [
+    "Plantar en suelos ácidos y bien drenados.",
+    "Usar plantas sanas y certificadas.",
+    "Cosechar con frecuencia y enfriar rápido."
+   ],
+   "aptitud": {
+    "valles-irrigados": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "estepa": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "cordillera": [
+     "alta",
+     "El Bolsón y la Comarca Andina son zona de referencia (frambuesa, frutilla, grosella, arándano)."
+    ],
+    "fueguina": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "lupulo",
+   "nombre": "Lúpulo",
+   "aliases": [
+    "lupulo",
+    "lúpulo",
+    "humulus lupulus"
+   ],
+   "tipo": "Cultivo industrial perenne",
+   "estacion": "Primavera–verano (plantación en primavera)",
+   "siembra": {
+    "meses": [
+     8,
+     9,
+     10
+    ],
+    "texto": "Plantación de rizomas de fines de invierno a primavera."
+   },
+   "clima": "Templado frío con inviernos fríos y veranos frescos; requiere conducción en espaldera.",
+   "agua": "Requiere riego regular; aprox. 700 a 900 mm por año.",
+   "plagas": [
+    {
+     "n": "Oídio (Podosphaera macularis)",
+     "d": "Polvo blanquecino en hojas y conos."
+    },
+    {
+     "n": "Arañuela roja (Tetranychus urticae)",
+     "d": "Aumenta con calor y sequedad."
+    },
+    {
+     "n": "Pulgón del lúpulo (Phorodon humuli)",
+     "d": "Debilita brotes y conos."
+    },
+    {
+     "n": "Verticilosis",
+     "d": "Marchitez por hongo del suelo."
+    }
+   ],
+   "peligros": [
+    "Heladas tardías",
+    "Viento sobre las espalderas",
+    "Sequía",
+    "Suelos con mal drenaje"
+   ],
+   "recomendaciones": [
+    "Instalar espalderas robustas.",
+    "Elegir variedades adaptadas al clima.",
+    "Cosechar en el momento óptimo de madurez."
+   ],
+   "aptitud": {
+    "valles-irrigados": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "estepa": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "cordillera": [
+     "alta",
+     "El Bolsón es la zona lupulera de Argentina."
+    ],
+    "fueguina": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "vid",
+   "nombre": "Vid",
+   "aliases": [
+    "vid",
+    "uva",
+    "uvas",
+    "vino",
+    "vitis",
+    "viñedo"
+   ],
+   "tipo": "Frutal perenne",
+   "estacion": "Todo el año (plantación en invierno–primavera)",
+   "siembra": {
+    "meses": [
+     8,
+     9,
+     10
+    ],
+    "texto": "Plantación de agosto a octubre, con riego y protección frente a heladas."
+   },
+   "clima": "Cálido y seco, con mucha radiación y buena amplitud térmica; sensible a heladas de primavera y granizo.",
+   "agua": "Requiere aprox. 300 a 600 mm por año; en zonas áridas se maneja con riego.",
+   "plagas": [
+    {
+     "n": "Oídio (Erysiphe necator)",
+     "d": "Polvo blanquecino en hojas y racimos; reduce calidad."
+    },
+    {
+     "n": "Peronospora (Plasmopara viticola)",
+     "d": "Favorecida por lluvias y humedad en primavera."
+    },
+    {
+     "n": "Polilla de la vid (Lobesia botrana)",
+     "d": "Plaga cuarentenaria bajo programa oficial de SENASA."
+    },
+    {
+     "n": "Botrytis y podredumbres del racimo",
+     "d": "Más frecuentes con lluvias cerca de la cosecha."
+    },
+    {
+     "n": "Chinches y otras plagas secundarias",
+     "d": "Pueden afectar brotes y bayas."
+    }
+   ],
+   "peligros": [
+    "Heladas tardías de primavera",
+    "Granizo",
+    "Viento (Zonda)",
+    "Falta de agua de riego"
+   ],
+   "recomendaciones": [
+    "Seguir las medidas del programa oficial contra Lobesia botrana.",
+    "Elegir cultivar, portainjerto y sistema de conducción según el sitio.",
+    "Instalar defensa activa o pasiva contra heladas y granizo."
+   ],
+   "aptitud": {
+    "valles-irrigados": [
+     "alta",
+     "Zona vitivinícola en expansión, de clima fresco y buena amplitud térmica (San Patricio del Chañar, Río Negro, Chubut)."
+    ],
+    "estepa": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "cordillera": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "fueguina": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "cebolla",
+   "nombre": "Cebolla",
+   "aliases": [
+    "cebolla",
+    "allium cepa"
+   ],
+   "tipo": "Hortaliza de bulbo",
+   "estacion": "Otoño–invierno o primavera (según ciclo)",
+   "siembra": {
+    "meses": [
+     8,
+     9
+    ],
+    "texto": "Siembra directa en agosto–septiembre, con riego (cebolla de guarda con cosecha en febrero–marzo)."
+   },
+   "clima": "Cultivo de clima templado, sensible al fotoperíodo; requiere riego uniforme.",
+   "agua": "Necesita riego regular; no tolera encharcamiento.",
+   "plagas": [
+    {
+     "n": "Peronospora (Peronospora destructor)",
+     "d": "Favorecida por humedad y temperaturas frescas."
+    },
+    {
+     "n": "Podredumbres de bulbo (Sclerotium, Fusarium, Botrytis)",
+     "d": "Pérdidas en campo y almacenamiento."
+    },
+    {
+     "n": "Trips (Thrips tabaci)",
+     "d": "Raspan hojas y reducen el tamaño del bulbo."
+    },
+    {
+     "n": "Mancha púrpura (Alternaria porri)",
+     "d": "Lesiones foliares con humedad alta."
+    }
+   ],
+   "peligros": [
+    "Granizo",
+    "Lluvias en cosecha",
+    "Salinidad",
+    "Subida a flor por frío fuera de época"
+   ],
+   "recomendaciones": [
+    "Elegir cultivares según el fotoperíodo de la zona.",
+    "Rotar con gramíneas.",
+    "Curar bien los bulbos antes de almacenar."
+   ],
+   "aptitud": {
+    "valles-irrigados": [
+     "alta",
+     "Muy buena aptitud en el Valle Inferior del Río Negro (Viedma-Patagones)."
+    ],
+    "estepa": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "cordillera": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "fueguina": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "papa",
+   "nombre": "Papa",
+   "aliases": [
+    "papa",
+    "patata",
+    "solanum tuberosum"
+   ],
+   "tipo": "Hortaliza de tubérculo",
+   "estacion": "Primavera–verano (siembra según zona)",
+   "siembra": {
+    "meses": [
+     9,
+     10,
+     11
+    ],
+    "texto": "Siembra de septiembre a noviembre, una vez pasado el período de heladas fuertes."
+   },
+   "clima": "Óptimo de 15 a 20 °C; la tuberización se frena por encima de 25 °C; sensible a heladas.",
+   "agua": "Requiere aprox. 500 a 700 mm bien distribuidos; riego en zonas secas.",
+   "plagas": [
+    {
+     "n": "Tizón tardío (Phytophthora infestans)",
+     "d": "Muy dañino con humedad y temperaturas templadas; monitorear y proteger preventivamente."
+    },
+    {
+     "n": "Tizón temprano (Alternaria solani)",
+     "d": "Más frecuente en cultivos estresados o con calor."
+    },
+    {
+     "n": "Virus (PVY, PLRV) y pulgones",
+     "d": "Se transmiten por pulgones y semilla infectada."
+    },
+    {
+     "n": "Polilla de la papa (Phthorimaea operculella) y plagas del suelo",
+     "d": "Dañan tubérculos en campo y almacenamiento; también gusanos de alambre y nematodos."
+    }
+   ],
+   "peligros": [
+    "Heladas",
+    "Calor excesivo en tuberización",
+    "Encharcamiento",
+    "Granizo"
+   ],
+   "recomendaciones": [
+    "Usar semilla certificada.",
+    "Rotar 3 o 4 años con gramíneas para evitar enfermedades del suelo.",
+    "Monitorear tizón en períodos húmedos."
+   ],
+   "aptitud": {
+    "valles-irrigados": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "estepa": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "cordillera": [
+     "media",
+     "Papa de clima frío con buena sanidad; la temporada es corta."
+    ],
+    "fueguina": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "ajo",
+   "nombre": "Ajo",
+   "aliases": [
+    "ajo",
+    "allium sativum"
+   ],
+   "tipo": "Hortaliza de bulbo",
+   "estacion": "Otoño–invierno (plantación) con cosecha en primavera–verano",
+   "siembra": {
+    "meses": [
+     4,
+     5,
+     6
+    ],
+    "texto": "Plantación de abril a junio."
+   },
+   "clima": "Requiere frío para bulbificar; cultivo invernal–primaveral con riego.",
+   "agua": "Necesita riego regular; no tolera encharcamiento.",
+   "plagas": [
+    {
+     "n": "Podredumbre blanca (Sclerotium cepivorum)",
+     "d": "Hongo persistente en el suelo; evitar lotes infectados."
+    },
+    {
+     "n": "Fusarium y Penicillium",
+     "d": "Pudriciones de bulbo en campo y almacenamiento."
+    },
+    {
+     "n": "Trips (Thrips tabaci) y ácaro del bulbo",
+     "d": "Afectan hojas y bulbos."
+    },
+    {
+     "n": "Virus del ajo",
+     "d": "Se transmiten con semilla infectada."
+    }
+   ],
+   "peligros": [
+    "Heladas muy tardías",
+    "Lluvias en cosecha",
+    "Granizo",
+    "Salinidad"
+   ],
+   "recomendaciones": [
+    "Usar bulbillos sanos y saneados.",
+    "Rotar al menos 4 años.",
+    "Curar el ajo adecuadamente antes del almacenamiento."
+   ],
+   "aptitud": {
+    "valles-irrigados": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "estepa": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "cordillera": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "fueguina": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "alfalfa",
+   "nombre": "Alfalfa",
+   "aliases": [
+    "alfalfa",
+    "medicago sativa"
+   ],
+   "tipo": "Forrajera perenne",
+   "estacion": "Todo el año (implantación en otoño o primavera temprana)",
+   "siembra": {
+    "meses": [
+     3,
+     4,
+     9,
+     10
+    ],
+    "texto": "Otoño (marzo–abril) o primavera (septiembre–octubre), con riego."
+   },
+   "clima": "Perenne; tolera frío invernal y calor, óptimo de 15 a 25 °C; sensible al encharcamiento.",
+   "agua": "Alta demanda (aprox. 800 a 1.200 mm por año); en zonas áridas se maneja bajo riego.",
+   "plagas": [
+    {
+     "n": "Pulgones (azul, moteado y verde)",
+     "d": "Debilitan la planta y reducen la calidad; monitorear tras cada corte."
+    },
+    {
+     "n": "Isoca de la alfalfa (Colias lesbia)",
+     "d": "Defolia el cultivo en brotes de primavera y verano."
+    },
+    {
+     "n": "Podredumbres de raíz y corona (Phytophthora, Fusarium)",
+     "d": "Más frecuentes con anegamiento y suelos mal drenados."
+    },
+    {
+     "n": "Cuscuta (maleza parásita)",
+     "d": "Se evita con semilla certificada libre de cuscuta."
+    }
+   ],
+   "peligros": [
+    "Anegamiento",
+    "Sequía sin riego",
+    "Salinidad",
+    "Heladas tardías en rebrote"
+   ],
+   "recomendaciones": [
+    "Elegir grupo de reposo invernal según la zona.",
+    "Cortar con 10% de floración para cuidar calidad y persistencia.",
+    "Implantar en lotes nivelados y con semilla certificada."
+   ],
+   "aptitud": {
+    "valles-irrigados": [
+     "alta",
+     "Principal forraje bajo riego en los valles."
+    ],
+    "estepa": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "cordillera": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "fueguina": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "trigo",
+   "nombre": "Trigo",
+   "aliases": [
+    "trigo",
+    "triticum"
+   ],
+   "tipo": "Cereal invernal",
+   "estacion": "Otoño–invierno (cultivo invernal)",
+   "siembra": {
+    "meses": [
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "texto": "Trigos de invierno (mayo–julio) y de primavera (agosto–septiembre)."
+   },
+   "clima": "Crece con 10 a 22 °C y necesita frío invernal; sensible a heladas en espigazón y a calor en llenado.",
+   "agua": "Requiere aprox. 350 a 550 mm; cuidar el balance hídrico en encañazón y llenado de granos.",
+   "plagas": [
+    {
+     "n": "Royas de la hoja y amarilla (Puccinia triticina, P. striiformis)",
+     "d": "Favorecidas por humedad y temperaturas templadas; elegir cultivares con buena resistencia."
+    },
+    {
+     "n": "Fusariosis de la espiga (Fusarium graminearum)",
+     "d": "Favorecida por lluvias en floración; riesgo de micotoxinas (DON)."
+    },
+    {
+     "n": "Mancha amarilla y septoriosis",
+     "d": "Enfermedades foliares de rastrojo; la rotación reduce la presión."
+    },
+    {
+     "n": "Pulgones y virus del enanismo amarillo de la cebada",
+     "d": "Los pulgones transmiten virus; monitorear en macollaje."
+    }
+   ],
+   "peligros": [
+    "Heladas en espigazón y floración",
+    "Estrés hídrico o calor en llenado",
+    "Granizo",
+    "Vuelco"
+   ],
+   "recomendaciones": [
+    "Elegir cultivares de ciclo adecuado a la fecha de siembra.",
+    "Monitorear enfermedades foliares y decidir fungicidas según umbral.",
+    "Evitar que la floración coincida con heladas tardías."
+   ],
+   "aptitud": {
+    "valles-irrigados": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "estepa": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "cordillera": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "fueguina": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "cebada",
+   "nombre": "Cebada",
+   "aliases": [
+    "cebada",
+    "hordeum"
+   ],
+   "tipo": "Cereal invernal",
+   "estacion": "Otoño–invierno (cultivo invernal)",
+   "siembra": {
+    "meses": [
+     8,
+     9,
+     10
+    ],
+    "texto": "Agosto a octubre (siembra de primavera)."
+   },
+   "clima": "Prospera con 8 a 20 °C; ciclo más corto que el trigo; sensible a calor en llenado.",
+   "agua": "Requiere aprox. 300 a 450 mm; sensible al déficit durante llenado.",
+   "plagas": [
+    {
+     "n": "Escaldadura (Rhynchosporium secalis)",
+     "d": "Mancha foliar favorecida por humedad y temperaturas frescas."
+    },
+    {
+     "n": "Mancha en red (Pyrenophora teres)",
+     "d": "Reduce el área foliar; más frecuente con rastrojo infectado."
+    },
+    {
+     "n": "Roya de la hoja (Puccinia hordei)",
+     "d": "Se favorece con humedad y temperaturas templadas."
+    },
+    {
+     "n": "Pulgones y virus del enanismo amarillo",
+     "d": "Transmiten virus; monitorear en macollaje."
+    }
+   ],
+   "peligros": [
+    "Heladas en espigazón",
+    "Estrés hídrico o calor en llenado",
+    "Exceso de nitrógeno (eleva la proteína y baja la calidad cervecera)",
+    "Granizo"
+   ],
+   "recomendaciones": [
+    "Elegir cultivares según destino (cervecera o forrajera).",
+    "Ajustar la fertilización nitrogenada para cuidar la calidad.",
+    "Monitorear enfermedades foliares."
+   ],
+   "aptitud": {
+    "valles-irrigados": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "estepa": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "cordillera": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "fueguina": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AgroAlerta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <a class="brand" asp-page="/Index">
+                <img src="~/images/logo.jpg"
+                     alt="AgroAlerta"
+                     class="brand-logo" />
+                <span class="brand-name">AgroAlerta</span>
+            </a>
+
+            <div class="sidebar-caption">MENÚ PRINCIPAL</div>
+            <nav class="navigation">
+                <a class="nav-link @(ViewData["Title"]?.ToString() == "Panel principal" ? "active" : "")" asp-page="/Index">
+                    <span class="nav-icon">⌂</span><span>Panel principal</span>
+                </a>
+                <a class="nav-link" href="/#agroMap">
+                    <span class="nav-icon">⌖</span><span>Mapa y ubicaciones</span>
+                </a>
+                <a class="nav-link @(ViewData["Title"]?.ToString() == "Rotación de cultivo" ? "active" : "")" asp-page="/Rotacion/Index">
+                    <span class="nav-icon">▱</span><span>Rotación de cultivo</span>
+                </a>
+                <a class="nav-link" href="/#misParcelasSection">
+                    <span class="nav-icon">▤</span><span>Mis parcelas</span>
+                </a>
+                <a class="nav-link" href="/#sueloSection">
+                    <span class="nav-icon">❖</span><span>Suelo y aptitud agrícola</span>
+                </a>
+                <a class="nav-link" href="/#riskSection">
+                    <span class="nav-icon">◷</span><span>Análisis de riesgos</span>
+                </a>
+                <a class="nav-link @(ViewData["Title"]?.ToString() == "Estación meteorológica" ? "active" : "")" asp-page="/Estaciones/Index">
+                    <span class="nav-icon">☁</span><span>Estación meteorológica</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-settings">
+                    <label for="languageSelect" data-localize="language">Language / Idioma</label>
+                    <select id="languageSelect" aria-label="Language / Idioma"><option value="en">English</option><option value="es">Español (Argentina)</option></select>
+                    <label class="theme-switch"><span id="themeLabel">Dark mode</span><input id="themeToggle" type="checkbox" role="switch" aria-label="Dark mode"/><span class="switch-track" aria-hidden="true"></span></label>
+                </div>
+                <div class="sidebar-footer">AgroAlerta <span>·</span> Versión inicial</div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Abrir menú">☰</button>
+                <div class="breadcrumb">AgroAlerta <span>/</span> <strong>@(ViewData["Title"]?.ToString() ?? "Panel principal")</strong></div>
+                <div class="topbar-right">
+                    <div class="live-clock"><span class="clock-dot"></span><span class="clock-caption">Time</span><span id="clock">--:--:--</span></div>
+                    <div class="user-avatar" title="Productor">P</div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                @RenderBody()
+                <footer class="page-footer">AgroAlerta · Información para acompañar decisiones agropecuarias.</footer>
+            </div>
+        </main>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="agrobot-float" id="agrobotFloat"><button type="button" class="agrobot-float-toggle" id="agrobotFloatToggle" aria-expanded="false">✦ AgroBot</button><section class="agrobot-float-panel" id="agrobotFloatPanel" hidden><header><div><strong>AgroBot</strong><small>Agricultural AI assistant</small></div><button type="button" id="agrobotFloatClose" aria-label="Close">×</button></header><div class="agrobot-float-messages" id="agrobotFloatMessages"><div class="chat-message bot-message">Hello! Ask me about crops, climate, soil and agricultural risks.</div></div><form id="agrobotFloatForm"><input id="agrobotFloatInput" maxlength="3000" placeholder="Ask AgroBot…" autocomplete="off"><button type="submit">Send</button></form></section></div>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/i18n.js" asp-append-version="true"></script>
+    <script src="~/js/agrobot-float.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

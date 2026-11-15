@@ -1,0 +1,125 @@
+@page
+@{
+    ViewData["Title"] = "Rotación de cultivo";
+}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<link rel="stylesheet" href="~/css/rotacion.css" asp-append-version="true" />
+<section class="rotation-hero">
+    <div><span class="eyebrow">PLANIFICACIÓN AGRÍCOLA · ARGENTINA</span><h1>Rotación de cultivo</h1><p>Dibujá el contorno de tu parcela, consultá su ubicación y guardala para planificar la rotación de cultivos.</p></div>
+    <span class="rotation-chip">▱ Selección por polígono</span>
+</section>
+<section class="rotation-workspace">
+    <article class="panel rotation-map-card">
+        <div class="rotation-head"><div><h2>Delimitá tu parcela</h2><p>Hacé clic en cada vértice del terreno. Cerrá el polígono tocando el primer punto o con «Finalizar contorno».</p></div><span class="tag">Solo Argentina</span></div>
+        <div class="rotation-step"><b>1</b><span>Buscá una zona</span><b>2</b><span>Marcá los vértices</span><b>3</b><span>Cerrá y guardá</span></div>
+        <div class="rotation-search">
+            <div class="rotation-search-field"><label for="rotationSearch">Localidad, provincia o dirección</label><div class="rotation-search-input"><input id="rotationSearch" type="search" placeholder="Ej.: La Banda, Santiago del Estero" autocomplete="off" maxlength="160"/><button type="button" id="rotationSearchBtn" class="primary-button">Buscar</button></div><div id="rotationSearchResults" class="rotation-results" role="listbox"></div></div>
+            <div><label for="rotationProvince">Provincia</label><select id="rotationProvince"><option value="">Todas las provincias</option></select></div>
+            <div><label for="rotationLocality">Localidad</label><select id="rotationLocality" disabled><option value="">Elegí una provincia</option></select></div>
+        </div>
+        <div class="rotation-custom-controls">
+            <div class="rotation-saved-picker">
+                <label for="rotationSavedSelect">Seleccionar una parcela guardada</label>
+                <select id="rotationSavedSelect" aria-describedby="rotationSavedHelp"><option value="">＋ Dibujar una parcela nueva</option></select>
+                <small id="rotationSavedHelp">Al elegir una parcela, se recuperan su ubicación y contorno en el mapa.</small>
+            </div>
+            <fieldset class="rotation-colors">
+                <legend>Color de la línea del contorno</legend>
+                <div class="rotation-color-options" id="rotationColorOptions" aria-label="Paleta de colores del contorno">
+                    <button type="button" class="rotation-color-dot" data-color="#C78B59" style="--swatch:#C78B59" aria-label="Terracota" title="Terracota"></button>
+                    <button type="button" class="rotation-color-dot" data-color="#8A7B4C" style="--swatch:#8A7B4C" aria-label="Oliva" title="Oliva"></button>
+                    <button type="button" class="rotation-color-dot" data-color="#2563EB" style="--swatch:#2563EB" aria-label="Azul" title="Azul"></button>
+                    <button type="button" class="rotation-color-dot" data-color="#16A34A" style="--swatch:#16A34A" aria-label="Verde" title="Verde"></button>
+                    <button type="button" class="rotation-color-dot" data-color="#DC2626" style="--swatch:#DC2626" aria-label="Rojo" title="Rojo"></button>
+                    <button type="button" class="rotation-color-dot" data-color="#9333EA" style="--swatch:#9333EA" aria-label="Violeta" title="Violeta"></button>
+                    <label class="rotation-custom-color" for="rotationColor"><span>Personalizado</span><input type="color" id="rotationColor" value="#C78B59" aria-label="Elegir color personalizado" /></label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="rotation-toolbar" role="toolbar" aria-label="Herramientas de dibujo">
+            <button type="button" class="rotation-tool is-primary" id="rotationDrawBtn">✎ Dibujar parcela</button>
+            <button type="button" class="rotation-tool" id="rotationUndoBtn" disabled>↶ Deshacer punto</button>
+            <button type="button" class="rotation-tool" id="rotationFinishBtn" disabled>✓ Finalizar contorno</button>
+            <button type="button" class="rotation-tool" id="rotationClearBtn">✕ Reiniciar</button>
+            <button type="button" class="rotation-tool" id="rotationMyLocation">◎ Mi ubicación</button>
+        </div>
+        <div class="rotation-map-header"><div id="rotationMapStatus" role="status">Modo dibujo activo: colocá el primer vértice.</div><div class="rotation-layer-selector"><button type="button" id="rotationStreets" class="active">▤ Calles</button><button type="button" id="rotationSatellite">▧ Satélite + calles</button></div></div>
+        <div id="rotationMap" class="rotation-map" aria-label="Mapa de Argentina para delimitar la parcela"></div>
+        <div class="rotation-bottom"><div><strong id="rotationCount">0 vértices</strong><span id="rotationSurface">Superficie: —</span></div><span>La superficie es aproximada y se calcula sobre las coordenadas del polígono.</span></div>
+        <section class="rotation-soil-form" aria-labelledby="rotationSoilTitle">
+            <div><h3 id="rotationSoilTitle">Datos de análisis de suelo</h3><p>Ingresá los valores de tu análisis de laboratorio. Son opcionales y se guardan con la parcela; no son mediciones automáticas. Para comparar: sodio = PSI/ESP (%) y conductividad = ECe de pasta saturada (dS/m).</p></div>
+            <div class="rotation-soil-fields">
+                <label for="rotationPh">pH <span>(0–14)</span><input id="rotationPh" type="number" inputmode="decimal" step="0.01" min="0" max="14" placeholder="Ej.: 6,5" /></label>
+                <label for="rotationSodium">Sodio intercambiable (PSI) <span>(%)</span><input id="rotationSodium" type="number" inputmode="decimal" step="0.01" min="0" max="100" placeholder="Ej.: 4" /></label>
+                <label for="rotationConductivity">Conductividad eléctrica (ECe) <span>(dS/m)</span><input id="rotationConductivity" type="number" inputmode="decimal" step="0.01" min="0" max="100" placeholder="Ej.: 1,2" /></label>
+            </div>
+        </section>
+    </article>
+    <aside class="rotation-sidebar">
+        <article class="panel rotation-info">
+            <div class="rotation-head"><div><h2>Datos de la parcela</h2><p>Se completan al cerrar el contorno.</p></div></div>
+            <div class="rotation-data"><span>Nombre</span><strong id="rotationPlace">Sin seleccionar</strong></div>
+            <div class="rotation-data"><span>Provincia</span><strong id="rotationProvinceInfo">—</strong></div>
+            <div class="rotation-data"><span>País</span><strong id="rotationCountryInfo">—</strong></div>
+            <div class="rotation-data"><span>Latitud</span><strong id="rotationLat">—</strong></div>
+            <div class="rotation-data"><span>Longitud</span><strong id="rotationLon">—</strong></div>
+            <div class="rotation-data"><span>Altitud</span><strong id="rotationAltitude">—</strong></div>
+            <div class="rotation-data"><span>Región</span><strong id="rotationRegion">—</strong></div>
+            <div class="rotation-data"><span>Subregión</span><strong id="rotationSubregion">—</strong></div>
+            <div class="rotation-data"><span>Superficie</span><strong id="rotationArea">—</strong></div>
+            <p class="rotation-disclaimer">Altitud y datos administrativos provienen de servicios geográficos externos y pueden ser estimados o estar temporalmente no disponibles.</p>
+        </article>
+        <article class="panel rotation-preview-card"><h2>Vista satelital de la parcela</h2><p>Imagen de referencia del terreno con el contorno dibujado.</p><div id="rotationPreview" class="rotation-preview"><span id="rotationPreviewHint">Dibujá una parcela para ver su imagen satelital.</span></div><small>Imágenes: Esri. La fecha de captura y resolución dependen de la zona; no equivalen a una observación en tiempo real.</small></article>
+        <article class="panel rotation-save-card"><h2>Guardar parcela</h2><label for="rotationName">Nombre identificador</label><input id="rotationName" maxlength="120" placeholder="Ej.: Lote 3 · Campo Norte"/><button id="rotationSaveBtn" class="primary-button" type="button" disabled>Guardar parcela</button><p id="rotationSaveMessage" role="status">Terminá de dibujar el contorno para guardar una parcela nueva.</p></article>
+    </aside>
+</section>
+<section class="panel rotation-assessment" aria-labelledby="rotationAssessmentTitle">
+    <div class="rotation-head"><div>
+        <span class="eyebrow">SUELO · CULTIVOS REGIONALES</span>
+        <h2 id="rotationAssessmentTitle">Compatibilidad de cultivos para tu parcela</h2>
+        <p>Seleccioná una parcela, completá sus análisis y compará cada cultivo frecuente de su región con los valores ingresados.</p>
+    </div><span class="tag" id="assessmentRegion">Región sin seleccionar</span></div>
+    <div class="rotation-assessment-note" id="assessmentNotice" role="status">Elegí una parcela guardada o dibujá un contorno para consultar los cultivos de la región.</div>
+    <div class="rotation-assessment-top">
+        <div><label for="assessmentCrop">Cultivo para comparar</label><select id="assessmentCrop" disabled><option value="">Primero seleccioná una parcela</option></select></div>
+        <div class="rotation-assessment-values"><span id="assessmentInputSummary">pH: — · PSI: — · ECe: —</span><small>Los cambios en los tres campos se reflejan inmediatamente. Guardá la parcela para conservarlos en SQL Server.</small></div>
+    </div>
+    <div class="rotation-assessment-table-wrap">
+      <table class="rotation-assessment-table" aria-describedby="assessmentMethod"><thead><tr><th>Parámetro</th><th>Tu parcela</th><th>Referencia del cultivo</th><th>Comparación / diferencia</th></tr></thead><tbody id="assessmentComparison"><tr><td colspan="4">Seleccioná una parcela para comenzar.</td></tr></tbody></table>
+    </div>
+    <div class="rotation-assessment-result" id="assessmentResult" role="status">Todavía no hay datos suficientes para recomendar un cultivo.</div>
+    <h3 class="rotation-crops-subtitle">Cultivos considerados en esta región</h3>
+    <div id="assessmentCropCards" class="rotation-crop-cards"><p>Al seleccionar una parcela aparecerán aquí los cultivos regionales y sus compatibilidades.</p></div>
+    <section class="rotation-soil-advice" aria-labelledby="soilAdviceTitle">
+        <h3 id="soilAdviceTitle">Suggested soil management actions</h3>
+        <p>Guidance for the selected crop, based on the three laboratory values. Amendments and application rates require a soil specialist and a validated laboratory report.</p>
+        <div id="assessmentAdvice" class="rotation-advice-grid" role="status">Select a plot and enter its soil measurements to see recommendations.</div>
+    </section>
+    <p class="rotation-assessment-method" id="assessmentMethod"><strong>How to interpret:</strong> Sodium must be <strong>ESP/PSI</strong> (exchangeable sodium percentage, not soluble sodium or Na in mg/kg). Conductivity must be <strong>ECe</strong> (saturation extract at 25 °C, dS/m). ECe thresholds indicate possible yield reduction, <strong>not minimum targets or fertilizer prescriptions</strong>. The ESP threshold is a general sodicity warning, not a crop sodium requirement. pH values are approximate screening references. Three parameters alone cannot establish planting suitability: assess climate, profile water, drainage, nutrients, variety and planting date with an agronomist.</p>
+    <p class="rotation-assessment-sources">Referencias: <a target="_blank" rel="noopener noreferrer" href="https://www.fao.org/4/T0667E/t0667e07.htm">FAO: tolerancia a salinidad por cultivo</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.fao.org/4/x5871e/x5871e05.htm">FAO: suelos sódicos (PSI)</a> · <a target="_blank" rel="noopener noreferrer" href="https://extension.psu.edu/soil-acidity-and-aglime">Penn State: pH del suelo</a> · <a target="_blank" rel="noopener noreferrer" href="https://extension.umn.edu/agriculture/crop-production/nutrient-management-for-minnesota-crops/lime-needs-in-minnesota">UMN: pH por grupos</a>.</p>
+</section>
+<section class="panel rotation-plan" aria-labelledby="rotationPlanTitle">
+    <span class="eyebrow">CROP SEQUENCE PLANNING</span>
+    <h2 id="rotationPlanTitle">What should I plant next?</h2>
+    <p>Choose what was grown previously and what you want to improve. AgroAlerta will suggest a next crop from the regional list and explain the considerations.</p>
+    <div class="rotation-plan-controls">
+        <label for="rotationPreviousCrop">Previous crop
+            <select id="rotationPreviousCrop" required>
+                <option value="">Choose a previous crop</option>
+            </select>
+        </label>
+        <label for="rotationGoal">Rotation goal<select id="rotationGoal">
+            <option value="fertility">Maximize fertility / replenish soil nutrients</option>
+            <option value="income">Diversify income / reduce risk</option>
+        </select></label>
+        <button id="rotationSuggestBtn" class="primary-button" type="button">Suggest next crop</button>
+    </div>
+    <div id="rotationPlanResult" class="rotation-plan-result" aria-live="polite">Select a plot, choose the previous crop and select a rotation goal.</div>
+    <small class="rotation-plan-caution">Illustrative agronomic decision support. Crop selection also depends on local calendar, water reserves, previous herbicides, pathogens, equipment, markets and soil analyses. Consult an agronomist before planting.</small>
+</section>
+@section Scripts {
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="~/js/rotacion.js" asp-append-version="true"></script>
+<script src="~/js/rotacion-aptitud.js" asp-append-version="true"></script>
+<script src="~/js/rotacion-plan.js" asp-append-version="true"></script>
+}

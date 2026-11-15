@@ -1,0 +1,65 @@
+.rotation-hero{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}.rotation-hero h1{font-size:clamp(1.6rem,3vw,2.35rem);margin:7px 0}.rotation-hero p{margin:0;color:var(--muted,#7c7669);max-width:750px}.rotation-chip{padding:9px 15px;border-radius:50px;background:#e3c39a;color:#3c3327;font-weight:700;white-space:nowrap}.rotation-workspace{display:grid;grid-template-columns:minmax(0,1fr) 325px;align-items:start;gap:18px}.rotation-map-card,.rotation-sidebar .panel,.rotation-list-card{padding:20px}.rotation-sidebar{display:grid;gap:16px}.rotation-head{display:flex;justify-content:space-between;align-items:start;gap:12px;margin-bottom:15px}.rotation-head h2,.rotation-sidebar h2{font-size:1.14rem;margin:0 0 6px}.rotation-head p,.rotation-sidebar p{font-size:.91rem;line-height:1.48;color:var(--muted,#797468);margin:0}.rotation-step{display:flex;gap:9px;align-items:center;flex-wrap:wrap;padding:11px 13px;border-radius:12px;background:rgba(138,123,76,.09);font-size:.85rem;margin-bottom:15px}.rotation-step b{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#8a7b4c;color:#fff}.rotation-search{display:grid;grid-template-columns:minmax(250px,2fr) minmax(140px,1fr) minmax(140px,1fr);gap:12px;align-items:end;margin-bottom:13px}.rotation-search label,.rotation-save-card label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px}.rotation-search input,.rotation-search select,.rotation-save-card input{width:100%;border:1px solid #b9aa91;border-radius:9px;background:var(--surface,#fff);color:var(--text,inherit);padding:11px;min-width:0;min-height:44px}.rotation-search-input{display:flex;gap:7px}.rotation-search-input .primary-button{padding:10px 13px}.rotation-search-field{position:relative}.rotation-results{position:absolute;top:100%;z-index:1100;width:100%;border-radius:10px;background:var(--surface,#fff);box-shadow:0 8px 22px #0002;max-height:220px;overflow:auto}.rotation-results button{display:block;width:100%;text-align:left;padding:11px;border:none;background:transparent;color:inherit;cursor:pointer}.rotation-results button:hover{background:rgba(138,123,76,.15)}.rotation-toolbar{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:13px}.rotation-tool{border:1px solid #c6ae8b;padding:9px 11px;border-radius:9px;background:transparent;color:inherit;cursor:pointer;font-weight:600}.rotation-tool:hover:not(:disabled){background:rgba(199,139,89,.15)}.rotation-tool:disabled{opacity:.45;cursor:not-allowed}.rotation-tool.is-primary{background:#8a7b4c;color:#fff;border-color:#8a7b4c}.rotation-map-header{display:flex;justify-content:space-between;align-items:center;gap:7px;flex-wrap:wrap;padding:9px 11px;border-radius:10px 10px 0 0;background:#3c3327;color:#fff;font-size:.84rem}.rotation-layer-selector{display:flex;gap:5px}.rotation-layer-selector button{border:1px solid #bfb09b;border-radius:7px;padding:8px;background:transparent;color:#fff;cursor:pointer}.rotation-layer-selector button.active{background:#e3c39a;color:#3c3327;font-weight:bold}.rotation-map{height:min(66vh,600px);min-height:410px;border-radius:0 0 10px 10px;z-index:1;cursor:crosshair}.rotation-map:not(.rotation-drawing){cursor:grab}.rotation-bottom{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:13px 1px 1px;font-size:.85rem}.rotation-bottom>div{display:flex;gap:14px;align-items:center}.rotation-data{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-bottom:1px solid rgba(138,123,76,.17);padding:10px 0;font-size:.87rem}.rotation-data span{color:var(--muted,#7c7669)}.rotation-data strong{text-align:right;overflow-wrap:anywhere;max-width:65%}.rotation-disclaimer{font-size:.76rem!important;margin-top:14px!important}.rotation-preview{height:208px;border-radius:10px;background:#eee3d5;display:grid;place-items:center;overflow:hidden;color:#5f5445;position:relative;margin:13px 0}.rotation-preview .leaflet-container{width:100%;height:100%}.rotation-preview-card small{font-size:.76rem;color:var(--muted,#797468);line-height:1.5}.rotation-save-card input{margin:5px 0 11px}.rotation-save-card .primary-button{width:100%}.rotation-save-card #rotationSaveMessage{margin-top:10px;font-size:.84rem}.rotation-saved-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:12px}.rotation-saved-item{padding:14px;border:1px solid rgba(138,123,76,.3);border-radius:12px}.rotation-saved-item strong{display:block;margin-bottom:7px}.rotation-saved-item small{display:block;line-height:1.7;color:var(--muted,#797468)}.rotation-saved-item button{margin-top:10px}.rotation-vertex-marker{height:12px;width:12px;border-radius:50%;background:#c78b59;border:2px solid #fff;box-shadow:0 0 0 2px #8a7b4c}.rotation-vertex-marker.first{background:#3c3327;width:17px;height:17px}.rotation-preview .leaflet-control-container{display:none}@media(max-width:1200px){.rotation-workspace{grid-template-columns:minmax(0,1fr)}.rotation-sidebar{grid-template-columns:repeat(2,minmax(0,1fr))}.rotation-save-card{grid-column:span 2}}@media(max-width:720px){.rotation-search{grid-template-columns:1fr}.rotation-sidebar{grid-template-columns:1fr}.rotation-save-card{grid-column:auto}.rotation-map{height:420px;min-height:330px}.rotation-hero{align-items:start;flex-direction:column}.rotation-layer-selector button{font-size:.78rem}.rotation-map-card,.rotation-sidebar .panel,.rotation-list-card{padding:14px}}
+
+/* Controles de parcelas y mediciones del suelo */
+.rotation-custom-controls{display:grid;grid-template-columns:minmax(220px,1fr) minmax(275px,1.25fr);align-items:end;gap:15px;margin:0 0 15px}
+.rotation-saved-picker label,.rotation-colors legend{display:block;font-size:.84rem;font-weight:700;margin-bottom:7px}
+.rotation-saved-picker select{display:block;width:100%;border:1px solid #b9aa91;border-radius:9px;background:var(--surface,#fff);color:var(--text,inherit);padding:10px;min-height:44px}
+.rotation-saved-picker small{display:block;color:var(--muted,#7c7669);font-size:.76rem;margin-top:5px}
+.rotation-colors{margin:0;min-width:0;border:1px solid rgba(138,123,76,.32);border-radius:11px;padding:8px 11px 10px}
+.rotation-colors legend{padding:0 5px;margin:0}
+.rotation-color-options{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.rotation-color-dot{height:30px;width:30px;border-radius:50%;background:var(--swatch);border:2px solid #fff;box-shadow:0 0 0 1px #a89982;cursor:pointer;flex:none}
+.rotation-color-dot[aria-pressed="true"]{box-shadow:0 0 0 3px #3c3327;transform:scale(1.08)}
+.rotation-custom-color{display:flex;align-items:center;gap:7px;font-size:.78rem;font-weight:600;cursor:pointer}
+.rotation-custom-color input{width:36px;height:31px;cursor:pointer;padding:1px;border:1px solid #b9aa91;border-radius:6px;background:transparent}
+.rotation-soil-form{margin-top:16px;padding:15px;border:1px solid rgba(138,123,76,.3);border-radius:12px;background:rgba(227,195,154,.08)}
+.rotation-soil-form h3{margin:0 0 4px;font-size:1.03rem}
+.rotation-soil-form p{margin:0 0 14px;font-size:.85rem;color:var(--muted,#7c7669);line-height:1.5}
+.rotation-soil-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.rotation-soil-fields label{font-size:.85rem;font-weight:700}
+.rotation-soil-fields label span{color:var(--muted,#7c7669);font-size:.77rem;font-weight:400}
+.rotation-soil-fields input{display:block;margin-top:7px;width:100%;min-width:0;min-height:44px;border:1px solid #b9aa91;border-radius:9px;background:var(--surface,#fff);color:var(--text,inherit);padding:10px}
+.rotation-soil-fields input:invalid{border-color:#c54832}
+@media(max-width:820px){.rotation-custom-controls{grid-template-columns:1fr}.rotation-soil-fields{grid-template-columns:1fr}}
+
+/* Evaluación de compatibilidad del suelo y cultivos por macrorregión */
+.rotation-assessment{margin-top:20px;padding:21px}
+.rotation-assessment .rotation-head{align-items:center;flex-wrap:wrap}
+.rotation-assessment .rotation-head h2{margin:5px 0 7px;font-size:1.26rem}
+.rotation-assessment-note{padding:11px 14px;border-radius:10px;background:rgba(138,123,76,.10);margin-bottom:15px;line-height:1.5;font-size:.88rem}
+.rotation-assessment-top{display:grid;grid-template-columns:minmax(210px,1fr) minmax(240px,2fr);gap:16px;align-items:end;margin-bottom:16px}
+.rotation-assessment-top label{display:block;font-weight:700;font-size:.87rem;margin-bottom:7px}
+.rotation-assessment-top select{width:100%;min-height:44px;padding:10px;border:1px solid #b9aa91;border-radius:10px;background:var(--surface,#fff);color:var(--text,inherit)}
+.rotation-assessment-values{display:grid;gap:5px;padding-bottom:2px}.rotation-assessment-values>span{font-weight:700}.rotation-assessment-values small{color:var(--muted,#797468);line-height:1.5}
+.rotation-assessment-table-wrap{overflow-x:auto;border-radius:11px;border:1px solid rgba(138,123,76,.3)}
+.rotation-assessment-table{width:100%;border-collapse:collapse;font-size:.87rem;min-width:650px}
+.rotation-assessment-table th{background:#3c3327;color:#fff;text-align:left;padding:12px}
+.rotation-assessment-table td{padding:13px 12px;vertical-align:top;border-bottom:1px solid rgba(138,123,76,.19)}
+.rotation-assessment-table tr:last-child td{border-bottom:0}
+.rotation-assessment-table .rotation-ok{font-weight:700;color:#28754e}
+.rotation-assessment-table .rotation-attention{font-weight:700;color:#ad5527}
+.rotation-assessment-result{padding:15px;border-left:4px solid #8a7b4c;border-radius:9px;background:rgba(227,195,154,.15);line-height:1.62;margin-top:15px}
+.rotation-crops-subtitle{margin:23px 0 12px;font-size:1.05rem}
+.rotation-crop-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:10px}
+.rotation-crop-choice{display:grid;gap:7px;text-align:left;border:1px solid rgba(138,123,76,.3);border-radius:10px;background:var(--surface,#fff);color:var(--text,inherit);padding:12px;cursor:pointer;font-family:inherit;min-height:80px}
+.rotation-crop-choice small{line-height:1.4;color:var(--muted,#797468)}
+.rotation-crop-choice[aria-pressed="true"]{outline:2px solid #c78b59;border-color:#c78b59}
+.rotation-crop-good{border-left:4px solid #28754e}.rotation-crop-warning{border-left:4px solid #c78b59}
+.rotation-assessment-method,.rotation-assessment-sources{font-size:.83rem;color:var(--muted,#797468);line-height:1.6;margin:18px 0 0}
+.rotation-assessment-sources a{color:inherit;text-decoration:underline}
+@media(max-width:750px){.rotation-assessment{padding:14px}.rotation-assessment-top{grid-template-columns:1fr}}
+
+/* Soil management suggestions and next-crop planner */
+.rotation-soil-advice{margin-top:23px;padding-top:18px;border-top:1px solid var(--border)}
+.rotation-soil-advice h3{font-size:1.08rem;margin:0 0 8px}.rotation-soil-advice p{color:var(--muted);line-height:1.55}
+.rotation-advice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.rotation-advice-item{border:1px solid var(--border);border-radius:11px;padding:15px;background:var(--surface-soft)}
+.rotation-advice-item strong{display:block;margin-bottom:8px}.rotation-advice-item p{font-size:.87rem;line-height:1.55;margin:0 0 9px}
+.rotation-advice-item small{color:var(--muted);line-height:1.4}
+.rotation-plan{margin-top:20px;padding:23px}.rotation-plan h2{margin:6px 0 8px;font-size:1.4rem}.rotation-plan>p{color:var(--muted);line-height:1.55}
+.rotation-plan-controls{display:grid;grid-template-columns:minmax(180px,1fr) minmax(240px,1.4fr) auto;gap:13px;align-items:end;margin-top:17px}
+.rotation-plan-controls label{font-weight:700;font-size:.86rem}.rotation-plan-controls input,.rotation-plan-controls select{margin-top:8px;display:block;width:100%;padding:11px;border:1px solid #b9aa91;border-radius:9px;color:var(--text);background:var(--surface);min-height:44px}
+.rotation-plan-result{background:var(--surface-soft);padding:18px;border-radius:10px;line-height:1.65;margin:19px 0 12px}.rotation-plan-caution{color:var(--muted);line-height:1.55;display:block}
+@media(max-width:860px){.rotation-advice-grid{grid-template-columns:1fr}.rotation-plan-controls{grid-template-columns:1fr}}
+
+.rotation-plan-result h3{font-size:1.05rem;margin:16px 0 6px;color:var(--text)}.rotation-plan-result h3:first-child{font-size:1.2rem;margin-top:0}.rotation-plan-result p{margin:7px 0;line-height:1.65}.rotation-plan-result ul{margin:9px 0 13px;padding-left:22px}.rotation-plan-result li{margin:6px 0;line-height:1.6}.rotation-plan-result small{display:block;margin-top:12px;color:var(--muted)}

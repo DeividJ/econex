@@ -1,0 +1,1026 @@
+{
+ "version": 1,
+ "region": {
+  "id": "nea",
+  "nombre": "NEA – Noreste Argentino",
+  "provincias": "Misiones, Corrientes, Chaco y Formosa"
+ },
+ "aviso": "Base de referencia orientativa elaborada para AgroAlerta. No es una respuesta en tiempo real de una API del INTA: los valores deben validarse con la Estación Experimental del INTA de la zona.",
+ "fuentes": [
+  {
+   "t": "INTA EEA Montecarlo (Misiones)",
+   "u": "https://inta.gob.ar/montecarlo"
+  },
+  {
+   "t": "INTA EEA Mercedes (Corrientes)",
+   "u": "https://inta.gob.ar/mercedes"
+  },
+  {
+   "t": "INTA EEA Sáenz Peña (Chaco)",
+   "u": "https://inta.gob.ar/saenzpena"
+  },
+  {
+   "t": "GeoINTA – visor de mapas de suelos",
+   "u": "https://visor.geointa.inta.gob.ar/"
+  }
+ ],
+ "subregiones": [
+  {
+   "id": "selva-paranaense",
+   "nombre": "Selva Paranaense (Misiones)",
+   "provincias": "Misiones",
+   "altitud": "Aprox. 100 a 800 msnm",
+   "clima": "Subtropical húmedo sin estación seca marcada; lluvias de 1.500 a 2.000 mm anuales bien distribuidas, veranos cálidos y heladas ocasionales en invierno.",
+   "suelo": "Suelos rojos lateríticos (ultisoles y oxisoles), profundos, arcillosos y ácidos; de buena estructura pero muy susceptibles a la erosión hídrica en pendiente.",
+   "peligros": [
+    "Erosión hídrica en lotes con pendiente",
+    "Heladas ocasionales (yerba, té y cítricos jóvenes)",
+    "Granizo y vientos fuertes",
+    "Alta presión de plagas y enfermedades por la humedad",
+    "Suelos ácidos de baja fertilidad natural"
+   ],
+   "inta": {
+    "t": "INTA EEA Montecarlo",
+    "u": "https://inta.gob.ar/montecarlo"
+   }
+  },
+  {
+   "id": "mesopotamia-corrientes",
+   "nombre": "Mesopotamia – Corrientes (Esteros y lomadas)",
+   "provincias": "Corrientes",
+   "altitud": "Aprox. 20 a 200 msnm",
+   "clima": "Subtropical húmedo con lluvias de 1.100 a 1.500 mm, veranos muy cálidos y heladas ocasionales en invierno, más frecuentes hacia el sur.",
+   "suelo": "Suelos arenosos y arcillosos de baja fertilidad en lomadas, e hidromórficos en esteros y bajos (Iberá), con mal drenaje y napa alta.",
+   "peligros": [
+    "Anegamiento e inundaciones",
+    "Sequías estivales ocasionales",
+    "Heladas (sobre todo en el sur)",
+    "Suelos de baja fertilidad y mal drenaje",
+    "Incendios de pastizales en períodos secos"
+   ],
+   "inta": {
+    "t": "INTA EEA Mercedes",
+    "u": "https://inta.gob.ar/mercedes"
+   }
+  },
+  {
+   "id": "chaco-humedo",
+   "nombre": "Chaco Húmedo",
+   "provincias": "Este de Chaco y Formosa",
+   "altitud": "Aprox. 50 a 100 msnm",
+   "clima": "Subtropical húmedo a subhúmedo con lluvias de 900 a 1.300 mm concentradas en primavera-verano, veranos muy calurosos e inviernos suaves con heladas ocasionales.",
+   "suelo": "Suelos de llanura aluvial de textura franco-arcillosa a arcillosa, con drenaje deficiente en áreas bajas y salinidad o sodicidad en sectores puntuales.",
+   "peligros": [
+    "Inundaciones y anegamientos",
+    "Sequías y períodos secos en pleno verano",
+    "Altas temperaturas en floración",
+    "Erosión hídrica en suelos desnudos",
+    "Salinidad y sodicidad en sectores"
+   ],
+   "inta": {
+    "t": "INTA EEA Sáenz Peña",
+    "u": "https://inta.gob.ar/saenzpena"
+   }
+  },
+  {
+   "id": "chaco-seco",
+   "nombre": "Chaco Semiárido (Chaco Seco)",
+   "provincias": "Oeste de Chaco y Formosa",
+   "altitud": "Aprox. 80 a 300 msnm",
+   "clima": "Subtropical semiárido con lluvias de 500 a 850 mm muy variables entre años, veranos muy calurosos (máximas de más de 40 °C) y alta evapotranspiración.",
+   "suelo": "Suelos franco a franco-limosos de buena fertilidad pero baja retención de agua, con tendencia a salinizarse y alta susceptibilidad a la erosión hídrica y eólica al desmontar.",
+   "peligros": [
+    "Sequías recurrentes",
+    "Calor extremo",
+    "Salinización y erosión de suelos",
+    "Heladas tardías ocasionales",
+    "Tormentas severas y vientos"
+   ],
+   "inta": {
+    "t": "INTA EEA Las Breñas",
+    "u": "https://inta.gob.ar/lasbrenas"
+   }
+  }
+ ],
+ "cultivos": [
+  {
+   "id": "soja",
+   "nombre": "Soja",
+   "aliases": [
+    "soja",
+    "soya",
+    "glycine max"
+   ],
+   "tipo": "Oleaginosa estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     10,
+     11,
+     12
+    ],
+    "texto": "Octubre a diciembre (soja de primera); soja de segunda en diciembre–enero, después de trigo."
+   },
+   "clima": "Temperatura óptima de 20 a 30 °C; sensible a heladas en emergencia y a calor o sequía en floración y llenado de granos.",
+   "agua": "Requiere aprox. 450 a 700 mm durante el ciclo; los períodos críticos son floración y llenado de granos.",
+   "plagas": [
+    {
+     "n": "Chinches (Nezara viridula, Piezodorus guildinii)",
+     "d": "Dañan vainas y granos durante el llenado; monitorear desde R3 según umbrales."
+    },
+    {
+     "n": "Orugas defoliadoras (Anticarsia gemmatalis, Rachiplusia nu)",
+     "d": "Consumen follaje; controlar solo al superar los umbrales de daño."
+    },
+    {
+     "n": "Roya asiática (Phakopsora pachyrhizi)",
+     "d": "Favorecida por humedad y temperaturas templadas; puede causar defoliación severa."
+    },
+    {
+     "n": "Enfermedades de fin de ciclo y mancha ojo de rana",
+     "d": "Frecuentes en años lluviosos; la rotación y el monitoreo ayudan a decidir el uso de fungicidas."
+    }
+   ],
+   "peligros": [
+    "Déficit hídrico en floración y llenado",
+    "Heladas tempranas o tardías",
+    "Granizo",
+    "Anegamiento en suelos mal drenados"
+   ],
+   "recomendaciones": [
+    "Elegir grupo de madurez según latitud y fecha de siembra.",
+    "Rotar con gramíneas (maíz, trigo) para sanidad y cobertura del suelo.",
+    "Monitorear plagas y enfermedades y usar umbrales de daño."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "media",
+     "Se cultiva en el sur y centro de Misiones sobre suelos rojos; la pendiente y la erosión son limitantes."
+    ],
+    "mesopotamia-corrientes": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-humedo": [
+     "alta",
+     "Cultivo de referencia del Chaco Húmedo, con buen potencial en años con lluvias normales."
+    ],
+    "chaco-seco": [
+     "media",
+     "Se cultiva, pero con alto riesgo por sequías y variabilidad de lluvias."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "maiz",
+   "nombre": "Maíz",
+   "aliases": [
+    "maiz",
+    "maíz",
+    "choclo",
+    "zea mays"
+   ],
+   "tipo": "Cereal estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     8,
+     9,
+     12,
+     1
+    ],
+    "texto": "Siembras tempranas de agosto a septiembre (evitan el calor en floración) y tardías de diciembre a enero."
+   },
+   "clima": "Temperatura óptima de 20 a 30 °C; evitar que la floración coincida con calor extremo (>35 °C).",
+   "agua": "Requiere aprox. 500 a 700 mm; el período crítico es alrededor de la floración.",
+   "plagas": [
+    {
+     "n": "Chicharrita del maíz (Dalbulus maidis) y achaparramiento",
+     "d": "Transmite espiroplasma/fitoplasma; las siembras tardías tienen mayor presión. Considerar híbridos tolerantes."
+    },
+    {
+     "n": "Cogollero (Spodoptera frugiperda)",
+     "d": "Ataca cogollo y espiga; monitorear desde la emergencia."
+    },
+    {
+     "n": "Barrenador del tallo (Diatraea saccharalis)",
+     "d": "Daño en tallo y espiga; favorece el vuelco."
+    },
+    {
+     "n": "Royas y tizón foliar (Exserohilum turcicum)",
+     "d": "Más frecuentes con humedad y temperaturas templadas."
+    },
+    {
+     "n": "Podredumbre de espiga y micotoxinas",
+     "d": "Asociadas a lluvias en madurez y daño de insectos."
+    }
+   ],
+   "peligros": [
+    "Estrés hídrico y golpe de calor en floración",
+    "Vuelco por vientos",
+    "Granizo",
+    "Heladas tempranas en siembras muy tardías"
+   ],
+   "recomendaciones": [
+    "Elegir híbridos adaptados a la zona y a la fecha de siembra.",
+    "Planificar la siembra para que la floración no coincida con el momento más caluroso o seco.",
+    "Rotar con soja u otra leguminosa para balancear nutrientes."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "mesopotamia-corrientes": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-humedo": [
+     "alta",
+     "Buen potencial; elegir fecha para que la floración no coincida con el calor extremo."
+    ],
+    "chaco-seco": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "algodon",
+   "nombre": "Algodón",
+   "aliases": [
+    "algodon",
+    "algodón",
+    "gossypium"
+   ],
+   "tipo": "Cultivo industrial estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     10,
+     11,
+     12
+    ],
+    "texto": "Octubre a diciembre; el ciclo largo exige sembrar sin demoras."
+   },
+   "clima": "Cálido, con 25 a 35 °C; ciclo largo que requiere un período libre de heladas de 150 a 180 días.",
+   "agua": "Requiere aprox. 600 a 900 mm; crítico en floración y formación de capullos.",
+   "plagas": [
+    {
+     "n": "Picudo del algodonero (Anthonomus grandis)",
+     "d": "Plaga clave; requiere monitoreo con trampas, manejo coordinado y destrucción de rastrojos."
+    },
+    {
+     "n": "Gusanos de la cápsula (Helicoverpa, Pectinophora)",
+     "d": "Dañan botones, flores y cápsulas."
+    },
+    {
+     "n": "Chinches, trips y pulgones",
+     "d": "Afectan brotes y capullos; reducen calidad de fibra."
+    },
+    {
+     "n": "Marchitez (Fusarium, Verticillium) y podredumbres",
+     "d": "Más frecuentes en lotes con historia de la enfermedad."
+    }
+   ],
+   "peligros": [
+    "Lluvias en cosecha (afectan la calidad de la fibra)",
+    "Sequía en floración",
+    "Heladas tempranas",
+    "Granizo"
+   ],
+   "recomendaciones": [
+    "Sembrar dentro de la fecha recomendada (el ciclo es largo).",
+    "Participar en el manejo regional del picudo.",
+    "Destruir rastrojos al final del ciclo."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "no",
+     "La humedad excesiva y los suelos ácidos no favorecen el cultivo."
+    ],
+    "mesopotamia-corrientes": [
+     "baja",
+     "Hay lotes aislados; el exceso de agua y la poca tradición lo vuelven poco frecuente."
+    ],
+    "chaco-humedo": [
+     "alta",
+     "Cultivo tradicional del Chaco; con manejo coordinado del picudo del algodonero."
+    ],
+    "chaco-seco": [
+     "alta",
+     "Muy sembrado en el oeste chaqueño; dependiente de las lluvias de verano."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "arroz",
+   "nombre": "Arroz",
+   "aliases": [
+    "arroz",
+    "oryza sativa"
+   ],
+   "tipo": "Cereal estival bajo riego",
+   "estacion": "Primavera–verano (cultivo estival con riego)",
+   "siembra": {
+    "meses": [
+     9,
+     10,
+     11
+    ],
+    "texto": "Septiembre a noviembre (siembra en seco o en agua, con riego por inundación)."
+   },
+   "clima": "Cálido, con 25 a 30 °C; sensible al frío en floración (menos de 15–17 °C).",
+   "agua": "Demanda muy alta: se cultiva con riego por inundación y requiere agua disponible durante todo el ciclo.",
+   "plagas": [
+    {
+     "n": "Brusone (Pyricularia oryzae)",
+     "d": "Principal enfermedad; favorecida por exceso de nitrógeno y noches húmedas."
+    },
+    {
+     "n": "Mancha parda y añublo de la vaina (Rhizoctonia)",
+     "d": "Afectan hojas y vainas en cultivos densos."
+    },
+    {
+     "n": "Gorgojo acuático (Oryzophagus oryzae) y chinche del arroz",
+     "d": "Dañan raíces, tallos y panojas."
+    },
+    {
+     "n": "Arroz colorado y malezas",
+     "d": "Maleza muy competitiva que baja la calidad del grano."
+    }
+   ],
+   "peligros": [
+    "Frío en floración",
+    "Falta de agua de riego",
+    "Vuelco",
+    "Salinidad"
+   ],
+   "recomendaciones": [
+    "Contar con riego asegurado antes de sembrar.",
+    "Elegir cultivares de ciclo adecuado y tolerantes a brusone.",
+    "Nivelar bien el lote y manejar el nitrógeno."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "mesopotamia-corrientes": [
+     "alta",
+     "Corrientes es la principal provincia arrocera del país, con riego por inundación."
+    ],
+    "chaco-humedo": [
+     "media",
+     "Posible en áreas con disponibilidad de agua y suelos arcillosos."
+    ],
+    "chaco-seco": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "yerba",
+   "nombre": "Yerba mate",
+   "aliases": [
+    "yerba",
+    "yerba mate",
+    "mate",
+    "ilex paraguariensis"
+   ],
+   "tipo": "Cultivo industrial perenne",
+   "estacion": "Todo el año (plantación en otoño–invierno)",
+   "siembra": {
+    "meses": [
+     5,
+     6,
+     7,
+     8
+    ],
+    "texto": "Plantación de mayo a agosto, con humedad de suelo y evitando las heladas más fuertes."
+   },
+   "clima": "Subtropical húmedo con 17 a 23 °C de media anual; las plantas jóvenes son sensibles a heladas fuertes.",
+   "agua": "Requiere lluvias de aprox. 1.500 a 2.000 mm bien distribuidas.",
+   "plagas": [
+    {
+     "n": "Taladro de la yerba (Hedypathes betulinus)",
+     "d": "Perfora ramas y tallos, debilita y puede matar la planta."
+    },
+    {
+     "n": "Cochinillas",
+     "d": "Se alimentan de savia y favorecen hongos de la fumagina."
+    },
+    {
+     "n": "Hormigas cortadoras (Acromyrmex, Atta)",
+     "d": "Defolian plantas, sobre todo en implantación."
+    },
+    {
+     "n": "Podredumbres de raíz",
+     "d": "Frecuentes en suelos mal drenados o compactados."
+    }
+   ],
+   "peligros": [
+    "Heladas",
+    "Sequía en implantación",
+    "Erosión en pendientes",
+    "Granizo y vientos"
+   ],
+   "recomendaciones": [
+    "Plantar en curvas de nivel y con cobertura entre líneas.",
+    "Proteger las plantas jóvenes de heladas y hormigas.",
+    "Cosechar respetando los ciclos de poda y descanso."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "alta",
+     "Misiones concentra la mayor parte de la producción nacional."
+    ],
+    "mesopotamia-corrientes": [
+     "media",
+     "Aptitud en el noreste correntino, con riesgo de heladas en el sur."
+    ],
+    "chaco-humedo": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "chaco-seco": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "te",
+   "nombre": "Té",
+   "aliases": [
+    "te",
+    "té",
+    "camellia sinensis"
+   ],
+   "tipo": "Cultivo industrial perenne",
+   "estacion": "Todo el año (plantación en primavera u otoño)",
+   "siembra": {
+    "meses": [
+     3,
+     4,
+     9,
+     10
+    ],
+    "texto": "Plantación en otoño (marzo–abril) o primavera (septiembre–octubre)."
+   },
+   "clima": "Subtropical húmedo; prefiere suelos ácidos (pH 4,5 a 5,5) y temperaturas moderadas.",
+   "agua": "Requiere más de 1.500 mm anuales bien distribuidos.",
+   "plagas": [
+    {
+     "n": "Arañuela roja (Oligonychus coffeae)",
+     "d": "Se acentúa en períodos secos y cálidos."
+    },
+    {
+     "n": "Ampolla del té (Exobasidium vexans)",
+     "d": "Hongo foliar favorecido por humedad persistente."
+    },
+    {
+     "n": "Cochinillas",
+     "d": "Debilitan brotes y reducen la calidad."
+    },
+    {
+     "n": "Hormigas cortadoras",
+     "d": "Dañan plantas jóvenes."
+    }
+   ],
+   "peligros": [
+    "Heladas",
+    "Sequía prolongada",
+    "Encharcamiento",
+    "Erosión en pendientes"
+   ],
+   "recomendaciones": [
+    "Plantar en suelos ácidos y bien drenados.",
+    "Mantener cobertura del suelo entre hileras.",
+    "Podar y cosechar según el ciclo del cultivo."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "alta",
+     "Zona tradicional del té en Argentina, sobre suelos rojos ácidos."
+    ],
+    "mesopotamia-corrientes": [
+     "media",
+     "Aptitud en el noreste, siempre que haya suelos ácidos y humedad."
+    ],
+    "chaco-humedo": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "chaco-seco": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "citricos",
+   "nombre": "Cítricos (limón, naranja, mandarina, pomelo)",
+   "aliases": [
+    "citricos",
+    "cítricos",
+    "limon",
+    "limón",
+    "naranja",
+    "mandarina",
+    "pomelo",
+    "citrus"
+   ],
+   "tipo": "Frutal perenne",
+   "estacion": "Todo el año (implantación en primavera u otoño)",
+   "siembra": {
+    "meses": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "texto": "Implantación de otoño o de fines de invierno a primavera, evitando heladas."
+   },
+   "clima": "Subtropical a templado cálido; sensibles a heladas, sobre todo los limoneros y plantas jóvenes.",
+   "agua": "Requiere aprox. 800 a 1.200 mm por año; riego complementario en zonas secas.",
+   "plagas": [
+    {
+     "n": "Cancrosis (Xanthomonas citri)",
+     "d": "Lesiones en hojas y frutos; se favorece por lluvia y viento."
+    },
+    {
+     "n": "Mancha negra de los cítricos (Phyllosticta citricarpa)",
+     "d": "Enfermedad cuarentenaria de importancia para exportación."
+    },
+    {
+     "n": "HLB / Huanglongbing y su vector (Diaphorina citri)",
+     "d": "Enfermedad grave de denuncia obligatoria ante SENASA."
+    },
+    {
+     "n": "Moscas de la fruta (Ceratitis capitata, Anastrepha fraterculus)",
+     "d": "Dañan frutos; se manejan con monitoreo y control regional."
+    },
+    {
+     "n": "Minador de la hoja (Phyllocnistis citrella)",
+     "d": "Daña brotes jóvenes."
+    }
+   ],
+   "peligros": [
+    "Heladas",
+    "Granizo",
+    "Vientos",
+    "Sequía o exceso de humedad"
+   ],
+   "recomendaciones": [
+    "Elegir portainjerto y variedad según clima y suelo.",
+    "Instalar cortinas rompevientos.",
+    "Monitorear plagas cuarentenarias y reportar sospechas a SENASA."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "mesopotamia-corrientes": [
+     "alta",
+     "Zona citrícola importante (Monte Caseros, Bella Vista, Mercedes), con riesgo de heladas."
+    ],
+    "chaco-humedo": [
+     "baja",
+     "Posible en áreas puntuales con riego y protección de heladas."
+    ],
+    "chaco-seco": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "tabaco",
+   "nombre": "Tabaco",
+   "aliases": [
+    "tabaco",
+    "nicotiana"
+   ],
+   "tipo": "Cultivo industrial",
+   "estacion": "Primavera–verano (almácigo en invierno)",
+   "siembra": {
+    "meses": [
+     8,
+     9,
+     10
+    ],
+    "texto": "Trasplante de agosto a octubre, con almácigo de mayo a julio."
+   },
+   "clima": "Cálido y húmedo, óptimo de 20 a 30 °C; sensible a heladas.",
+   "agua": "Requiere aprox. 500 a 700 mm; evitar encharcamiento.",
+   "plagas": [
+    {
+     "n": "Moho azul (Peronospora tabacina)",
+     "d": "Afecta almácigos y plantas jóvenes en períodos frescos y húmedos."
+    },
+    {
+     "n": "Pata negra (Phytophthora nicotianae)",
+     "d": "Pudrición de raíz y base del tallo en suelos pesados."
+    },
+    {
+     "n": "Pulgones y virus",
+     "d": "Transmiten virus del mosaico y otros."
+    },
+    {
+     "n": "Isocas y gusanos (Manduca sexta, Heliothis)",
+     "d": "Defolian y dañan hojas."
+    }
+   ],
+   "peligros": [
+    "Granizo",
+    "Heladas en almácigo o trasplante tardío",
+    "Exceso de humedad",
+    "Sequía"
+   ],
+   "recomendaciones": [
+    "Usar plantines sanos de almácigo controlado.",
+    "Rotar con gramíneas.",
+    "Manejar bien el curado y secado para cuidar la calidad."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "alta",
+     "Principal zona tabacalera (Burley y otros tipos) de Misiones."
+    ],
+    "mesopotamia-corrientes": [
+     "media",
+     "Se cultiva en superficies menores; requiere manejo del drenaje."
+    ],
+    "chaco-humedo": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "chaco-seco": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "mandioca",
+   "nombre": "Mandioca",
+   "aliases": [
+    "mandioca",
+    "yuca",
+    "manihot esculenta"
+   ],
+   "tipo": "Cultivo de raíz",
+   "estacion": "Primavera–verano (plantación por estacas)",
+   "siembra": {
+    "meses": [
+     8,
+     9,
+     10
+    ],
+    "texto": "Plantación de agosto a octubre, con estacas sanas y sin riesgo de heladas."
+   },
+   "clima": "Cálido, con 20 a 30 °C; no tolera heladas.",
+   "agua": "Requiere aprox. 1.000 a 1.500 mm; tolera períodos secos una vez establecida.",
+   "plagas": [
+    {
+     "n": "Bacteriosis (Xanthomonas axonopodis pv. manihotis)",
+     "d": "Se transmite por estacas infectadas."
+    },
+    {
+     "n": "Podredumbre de raíz (Phytophthora, Fusarium)",
+     "d": "Favorecida por encharcamiento."
+    },
+    {
+     "n": "Cochinillas, mosca blanca y chinche de encaje",
+     "d": "Debilitan las plantas."
+    },
+    {
+     "n": "Hormigas cortadoras",
+     "d": "Defolian en implantación."
+    }
+   ],
+   "peligros": [
+    "Heladas",
+    "Encharcamiento",
+    "Sequía prolongada en implantación"
+   ],
+   "recomendaciones": [
+    "Usar estacas sanas.",
+    "Plantar en suelos livianos y con buen drenaje.",
+    "Controlar malezas en los primeros meses."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "alta",
+     "Cultivo tradicional en chacras familiares."
+    ],
+    "mesopotamia-corrientes": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "chaco-humedo": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-seco": [
+     "baja",
+     "Posible con lluvias adecuadas; baja aptitud por sequías prolongadas."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "forestales",
+   "nombre": "Forestales (pino y eucalipto)",
+   "aliases": [
+    "forestales",
+    "pino",
+    "pinos",
+    "eucalipto",
+    "eucaliptus",
+    "forestacion",
+    "forestación"
+   ],
+   "tipo": "Cultivo forestal perenne",
+   "estacion": "Todo el año (plantación en otoño–invierno y primavera)",
+   "siembra": {
+    "meses": [
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "texto": "Plantación de mayo a septiembre, aprovechando la humedad del suelo."
+   },
+   "clima": "Subtropical húmedo a templado; pinos (Pinus taeda, P. elliottii) y eucaliptos prosperan con lluvias abundantes; los eucaliptos jóvenes sufren heladas.",
+   "agua": "Requiere más de 1.200 mm anuales; la sequía afecta la implantación.",
+   "plagas": [
+    {
+     "n": "Hormigas cortadoras (Acromyrmex, Atta)",
+     "d": "Principal amenaza en plantaciones nuevas."
+    },
+    {
+     "n": "Avispa de la madera (Sirex noctilio)",
+     "d": "Afecta pinos estresados; hay programa de control biológico."
+    },
+    {
+     "n": "Chinche del eucalipto (Thaumastocoris peregrinus)",
+     "d": "Provoca amarillamiento y caída de hojas."
+    },
+    {
+     "n": "Escarabajos y hongos de raíz",
+     "d": "Pueden afectar la implantación."
+    }
+   ],
+   "peligros": [
+    "Incendios forestales",
+    "Heladas en eucaliptos jóvenes",
+    "Vientos fuertes",
+    "Sequía en implantación"
+   ],
+   "recomendaciones": [
+    "Elegir especie y procedencia según clima y suelo.",
+    "Controlar hormigas antes y durante la implantación.",
+    "Mantener cortafuegos y cumplir las normas forestales."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "alta",
+     "Principal polo forestal del país (pino y eucalipto)."
+    ],
+    "mesopotamia-corrientes": [
+     "alta",
+     "Gran superficie forestal en el norte y noreste de la provincia."
+    ],
+    "chaco-humedo": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "chaco-seco": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "sorgo",
+   "nombre": "Sorgo",
+   "aliases": [
+    "sorgo",
+    "sorghum"
+   ],
+   "tipo": "Cereal estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     10,
+     11,
+     12,
+     1
+    ],
+    "texto": "Octubre a enero."
+   },
+   "clima": "Óptimo de 25 a 30 °C; soporta bien el calor y la sequía, pero es sensible a heladas.",
+   "agua": "Requiere aprox. 400 a 550 mm; tolera sequías mejor que el maíz.",
+   "plagas": [
+    {
+     "n": "Pulgón amarillo (Melanaphis sacchari) y pulgón verde",
+     "d": "Debilitan la planta y reducen el rendimiento; monitorear desde macollaje."
+    },
+    {
+     "n": "Mosquita del sorgo (Contarinia sorghicola)",
+     "d": "Daña flores y reduce el llenado de la panoja."
+    },
+    {
+     "n": "Aves granívoras",
+     "d": "Provocan pérdidas importantes en madurez."
+    },
+    {
+     "n": "Cornezuelo y enfermedades foliares",
+     "d": "Más frecuentes con humedad alta en floración."
+    }
+   ],
+   "peligros": [
+    "Heladas tempranas",
+    "Vuelco",
+    "Sequía severa en panojamiento",
+    "Anegamiento"
+   ],
+   "recomendaciones": [
+    "Sembrar con suelo ya templado.",
+    "Elegir híbridos según destino (grano, forraje, silo).",
+    "Controlar malezas en los primeros estadios."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "mesopotamia-corrientes": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-humedo": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "chaco-seco": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "girasol",
+   "nombre": "Girasol",
+   "aliases": [
+    "girasol",
+    "helianthus"
+   ],
+   "tipo": "Oleaginosa estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     6,
+     7,
+     8
+    ],
+    "texto": "Siembras tempranas de junio a agosto; evitar que la floración coincida con el momento más caluroso."
+   },
+   "clima": "Óptimo de 20 a 28 °C; tolera sequía moderada, pero es sensible a heladas en estadios iniciales.",
+   "agua": "Requiere aprox. 300 a 600 mm; la floración y el llenado son los momentos críticos.",
+   "plagas": [
+    {
+     "n": "Podredumbre blanca del capítulo (Sclerotinia)",
+     "d": "Favorecida por lluvias y humedad en floración y llenado."
+    },
+    {
+     "n": "Mancha negra del tallo (Phoma) y tizón por Alternaria",
+     "d": "Pueden adelantar la madurez y reducir el rendimiento."
+    },
+    {
+     "n": "Orugas y chinches",
+     "d": "Orugas defoliadoras y chinches pueden dañar plántulas, hojas y capítulos."
+    },
+    {
+     "n": "Aves (palomas, cotorras)",
+     "d": "Dañan capítulos durante la madurez; en lotes grandes pueden causar pérdidas importantes."
+    }
+   ],
+   "peligros": [
+    "Granizo",
+    "Vuelco por viento en fin de ciclo",
+    "Heladas en emergencia",
+    "Lluvias en cosecha (podredumbre del capítulo)"
+   ],
+   "recomendaciones": [
+    "Elegir híbridos con tolerancia a enfermedades y ciclo adecuado.",
+    "Evitar rotaciones muy cortas con girasol, soja o colza (Sclerotinia).",
+    "Planificar la cosecha para evitar pérdidas por aves y lluvias."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "baja",
+     "La humedad alta favorece enfermedades como la podredumbre blanca."
+    ],
+    "mesopotamia-corrientes": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "chaco-humedo": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "chaco-seco": [
+     "alta",
+     "Buena opción en el centro-oeste con siembras tempranas."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "trigo",
+   "nombre": "Trigo",
+   "aliases": [
+    "trigo",
+    "triticum"
+   ],
+   "tipo": "Cereal invernal",
+   "estacion": "Otoño–invierno (cultivo invernal)",
+   "siembra": {
+    "meses": [
+     5,
+     6,
+     7
+    ],
+    "texto": "Mayo a julio."
+   },
+   "clima": "Crece con 10 a 22 °C y necesita frío invernal; sensible a heladas en espigazón y a calor en llenado.",
+   "agua": "Requiere aprox. 350 a 550 mm; cuidar el balance hídrico en encañazón y llenado de granos.",
+   "plagas": [
+    {
+     "n": "Royas de la hoja y amarilla (Puccinia triticina, P. striiformis)",
+     "d": "Favorecidas por humedad y temperaturas templadas; elegir cultivares con buena resistencia."
+    },
+    {
+     "n": "Fusariosis de la espiga (Fusarium graminearum)",
+     "d": "Favorecida por lluvias en floración; riesgo de micotoxinas (DON)."
+    },
+    {
+     "n": "Mancha amarilla y septoriosis",
+     "d": "Enfermedades foliares de rastrojo; la rotación reduce la presión."
+    },
+    {
+     "n": "Pulgones y virus del enanismo amarillo de la cebada",
+     "d": "Los pulgones transmiten virus; monitorear en macollaje."
+    }
+   ],
+   "peligros": [
+    "Heladas en espigazón y floración",
+    "Estrés hídrico o calor en llenado",
+    "Granizo",
+    "Vuelco"
+   ],
+   "recomendaciones": [
+    "Elegir cultivares de ciclo adecuado a la fecha de siembra.",
+    "Monitorear enfermedades foliares y decidir fungicidas según umbral.",
+    "Evitar que la floración coincida con heladas tardías."
+   ],
+   "aptitud": {
+    "selva-paranaense": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "mesopotamia-corrientes": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "chaco-humedo": [
+     "media",
+     "Cultivo invernal de alternancia con soja y algodón; riesgo de heladas tardías y calor en llenado."
+    ],
+    "chaco-seco": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  }
+ ]
+}

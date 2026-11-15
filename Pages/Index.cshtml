@@ -1,0 +1,144 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Panel principal";
+}
+<section class="welcome-row">
+    <div>
+        <div class="eyebrow">CENTRO DE MONITOREO AGROCLIMÁTICO</div>
+        <h1 id="greeting">Buen día, productor</h1>
+        <p class="welcome-text">Consultá las condiciones climáticas y prepará el seguimiento de tus parcelas.</p>
+    </div>
+    <button class="primary-button" type="button" id="dashboardAnalyzeBtn">
+        <span>✧</span> Analizar riesgos climáticos
+    </button>
+</section>
+
+<section class="notice">
+    <span class="notice-icon">i</span>
+    <div><strong>Datos meteorológicos bajo demanda</strong><p>Los pronósticos se consultan al ejecutar un análisis sobre una parcela. Se identifican la fuente y el período de pronóstico.</p></div>
+</section>
+
+<section class="map-workspace">
+    <article class="panel map-panel-full">
+        <div class="panel-heading map-title-row">
+            <div><h2>Mapa mundial y selección de parcelas</h2><p>Buscá cualquier lugar del mundo o explorá las provincias y localidades de Argentina.</p></div>
+            <span class="tag">Mapa interactivo</span>
+        </div>
+        <div class="map-tools">
+            <div class="map-search-wrap">
+                <label for="placeSearch">Buscar país, provincia, localidad o dirección</label>
+                <div class="map-search-line">
+                    <input id="placeSearch" type="search" placeholder="Ej.: Añatuya, Santiago del Estero / Madrid / Córdoba..." autocomplete="off" />
+                    <button id="searchPlaceBtn" type="button" class="map-action-button">Buscar</button>
+                </div>
+                <div id="searchResults" class="search-results" role="listbox" aria-label="Resultados de búsqueda"></div>
+            </div>
+            <div class="map-filter-wrap">
+                <label for="provinceSelect">Provincia argentina</label>
+                <select id="provinceSelect"><option value="">Seleccionar provincia</option></select>
+            </div>
+            <div class="map-filter-wrap locality-filter-wrap">
+                <label for="localitySelect">Localidades de la provincia</label>
+                <select id="localitySelect" disabled><option value="">Primero elegí una provincia</option></select>
+            </div>
+            <button id="locateMeBtn" type="button" class="map-secondary-button">◎ Mi ubicación</button>
+            <button id="mapLayerBtn" type="button" class="map-secondary-button">▧ Ver satélite</button>
+        </div>
+        <div class="map-main-layout">
+            <div id="agroMap" class="interactive-map" aria-label="Mapa interactivo mundial"></div>
+            <aside class="location-card" aria-live="polite">
+                <div class="location-card-heading"><span class="location-pin-small">⌖</span><div><strong>Ubicación seleccionada</strong><small id="selectionStatus">Hacé clic en el mapa o buscá un lugar</small></div></div>
+                <div class="location-data-row"><span>Nombre</span><strong id="selectedName">Sin seleccionar</strong></div>
+                <div class="location-data-row"><span>Provincia</span><strong id="selectedRegion">—</strong></div>
+                <div class="location-data-row"><span>País</span><strong id="selectedCountry">—</strong></div>
+                <div class="location-data-row"><span>Latitud</span><strong id="selectedLat">—</strong></div>
+                <div class="location-data-row"><span>Longitud</span><strong id="selectedLon">—</strong></div>
+                <div class="location-data-row"><span>Altitud</span><strong id="selectedElevation">—</strong></div>
+                <div class="location-data-row"><span>Región</span><strong id="selectedMacroRegion">—</strong></div>
+                <div class="location-data-row"><span>Subregión</span><strong id="selectedSubRegion">—</strong></div>
+                <button id="goToSoilBtn" type="button" class="map-secondary-button location-soil-btn">❖ Ver suelo y aptitud agrícola de este punto</button>
+                <label class="parcel-label" for="parcelName">Nombre para guardar como parcela</label>
+                <input id="parcelName" type="text" placeholder="Ej.: Lote norte" maxlength="120" />
+                <button id="saveParcelBtn" type="button" class="primary-button save-parcel-button" disabled>＋ Guardar como parcela</button>
+                <p class="save-note" id="saveNote">Las parcelas se guardarán temporalmente en este navegador hasta incorporar el inicio de sesión y la vinculación con SQL Server.</p>
+                <div class="saved-parcels"><strong>Parcelas guardadas en este navegador</strong><ul id="savedParcelList"><li>Todavía no guardaste parcelas.</li></ul></div>
+            </aside>
+        </div>
+        <div class="map-attribution-note">Búsqueda argentina: Georef (datos oficiales). Búsqueda mundial: Photon / OpenStreetMap. Mapa base: OpenStreetMap. Imágenes satelitales: Esri. La ubicación del dispositivo solo se consulta si presionás «Mi ubicación» y autorizás el permiso.</div>
+    </article>
+</section>
+
+<section class="feature-grid" id="misParcelasSection">
+    <article class="panel feature-panel">
+        <div class="panel-heading"><div><h2>Mis parcelas</h2><p>Ubicaciones que guardaste en SQL Server</p></div><button class="map-action-button" id="refreshParcelsBtn" type="button">Actualizar</button></div>
+        <div id="parcelCards" class="data-list"><p class="muted">Cargando parcelas…</p></div>
+    </article>
+    <article class="panel feature-panel" id="riskSection">
+        <div class="panel-heading"><div><h2>Análisis de riesgos</h2><p>Pronóstico meteorológico de los próximos 7 días</p></div></div>
+        <label for="analysisParcelSelect">Parcela a analizar</label>
+        <select id="analysisParcelSelect" class="feature-select"><option value="">Seleccioná una parcela guardada</option></select>
+        <button class="primary-button feature-action" id="analyzeBtn" type="button">✧ Analizar riesgos climáticos</button>
+        <div id="analysisResult" class="analysis-result"><p class="muted">Elegí una parcela y ejecutá el análisis. Se consultará Open-Meteo y se guardará el resultado en el historial.</p></div>
+    </article>
+</section>
+
+
+<section class="panel feature-panel climate-panel" id="climateSection">
+ <div class="panel-heading"><div><h2>Clima, históricos y perspectivas</h2><p>Elegí un rango de fechas en cada calendario para comparar el período histórico con la perspectiva futura.</p></div><span class="tag">Open-Meteo</span></div>
+ <div class="climate-controls">
+  <div><label for="historyRange">📅 Período histórico</label><input id="historyRange" type="text" placeholder="Elegí fecha o rango (pasado)" readonly /></div>
+  <div><label for="futureRange">📅 Perspectiva futura</label><input id="futureRange" type="text" placeholder="Elegí fecha o rango (futuro)" readonly /></div>
+  <button type="button" id="compareBtn" class="primary-button">Comparar períodos</button>
+  <button type="button" id="clearRangesBtn" class="map-action-button">Limpiar</button>
+  <div id="climateLocationNote" class="climate-location-note">Elegí una parcela en el análisis.</div>
+ </div>
+ <p class="data-source-note">Para elegir un solo día, hacé clic dos veces sobre la misma fecha. Hasta 15 días hacia adelante se usa pronóstico meteorológico; más allá, un promedio de los últimos 5 años (referencia climática, no pronóstico).</p>
+ <div class="current-weather-grid" id="currentWeather"><div class="weather-current-card"><span>Estado del cielo</span><strong>—</strong><small>Esperando ubicación</small></div><div class="weather-current-card"><span>Temperatura</span><strong>— °C</strong><small>Temperatura a 2 m</small></div><div class="weather-current-card"><span>Humedad</span><strong>— %</strong><small>Humedad relativa</small></div><div class="weather-current-card"><span>Viento</span><strong>— km/h</strong><small>Velocidad a 10 m</small></div><div class="weather-current-card"><span>Precipitación</span><strong>— mm</strong><small>Dato del modelo</small></div></div>
+ <div class="climate-chart-legend-note">Barras: precipitación diaria (mm) · Líneas: temperatura máxima y mínima (°C). Barras claras y líneas punteadas = promedio climático de años anteriores (no es pronóstico).</div>
+ <div class="compare-grid" id="compareGrid">
+  <div class="compare-col" id="historyCol" hidden><div class="climate-chart-heading"><h3 id="historyChartTitle">Período histórico</h3><p id="historyChartSubtitle"></p></div><div class="climate-chart-wrap"><canvas id="historyChart" aria-label="Gráfico del período histórico"></canvas></div></div>
+  <div class="compare-col" id="futureCol" hidden><div class="climate-chart-heading"><h3 id="futureChartTitle">Perspectiva futura</h3><p id="futureChartSubtitle"></p></div><div class="climate-chart-wrap"><canvas id="futureChart" aria-label="Gráfico de la perspectiva futura"></canvas></div></div>
+ </div>
+ <div id="climateComparison" class="outlook-panel" aria-live="polite"><h3>Comparativa</h3><p>Seleccioná una parcela y al menos un rango de fechas.</p></div>
+ <div id="wheatSection" class="wheat-section" aria-live="polite"></div>
+ <p class="data-source-note" id="climateSourceNote">Los modelos meteorológicos no equivalen necesariamente a mediciones de una estación dentro del lote.</p>
+</section>
+<section class="panel feature-panel sowing-panel" id="sowingSection">
+ <div class="panel-heading"><div><h2>Aptitud agrícola y calendario de siembra</h2><p>Orientación inicial sobre cultivo y ventana de implantación.</p></div><span class="tag">Planificación</span></div>
+ <div class="sowing-controls"><div><label for="sowingCrop">Cultivo que querés sembrar</label><select id="sowingCrop" class="feature-select"><option value="trigo">Trigo</option><option value="soja">Soja</option><option value="maiz">Maíz</option><option value="sorgo">Sorgo</option><option value="girasol">Girasol</option><option value="algodon">Algodón</option></select></div><button type="button" class="primary-button" id="evaluateSowingBtn">Evaluar cultivo y fecha</button></div>
+ <div id="sowingResult" class="sowing-result"><p class="muted">Seleccioná una parcela y un cultivo para conocer la ventana general y las condiciones a verificar.</p></div>
+ <p class="data-source-note">Las ventanas son referencias generales, no fechas exactas. Deben validarse con el calendario provincial/INTA, variedad, ciclo, suelo y humedad del perfil.</p>
+</section>
+<section class="risk-level-guide"><h2>¿Qué significa cada nivel de riesgo?</h2><div class="risk-guide-grid">
+ <article><span class="risk-pill risk-informativo">Informativo</span><p>No se activaron umbrales. No significa riesgo cero.</p></article>
+ <article><span class="risk-pill risk-bajo">Bajo</span><p>Señales leves. Mantené el seguimiento habitual.</p></article>
+ <article><span class="risk-pill risk-moderado">Moderado</span><p>Condición que merece atención. Verificá el lote y planificá con precaución.</p></article>
+ <article><span class="risk-pill risk-alto">Alto</span><p>Podría afectar al cultivo o las labores. Evaluá medidas preventivas.</p></article>
+ <article><span class="risk-pill risk-super-alto">Súper alto</span><p>Umbral extremo del sistema. Priorizá revisar el lote y tomar medidas apropiadas.</p></article>
+ </div><p class="data-source-note">Indicadores automáticos preliminares. Deben ajustarse por cultivo, suelo y etapa fenológica.</p></section>
+
+
+<section class="panel quick-panel">
+    <div class="panel-heading"><div><h2>Accesos rápidos</h2><p>Herramientas principales de la plataforma</p></div></div>
+    <div class="quick-grid">
+        <div class="quick-item"><span class="quick-icon">⌖</span><div><strong>Consultar ubicación</strong><small>Buscar una zona geográfica</small></div><span class="quick-arrow">→</span></div>
+        <div class="quick-item"><span class="quick-icon">▤</span><div><strong>Registrar parcela</strong><small>Guardar una parcela y su cultivo</small></div><span class="quick-arrow">→</span></div>
+
+    </div>
+</section>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="~/js/map.js" asp-append-version="true"></script>
+    <script src="~/js/regiones.js" asp-append-version="true"></script>
+    <script src="~/js/features.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/es.js"></script>
+    <script src="~/js/climate.js" asp-append-version="true"></script>
+    <link rel="stylesheet" href="~/css/suelo.css" asp-append-version="true" />
+    <script src="~/js/suelo.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,55 @@
+/* Análisis de suelo y aptitud agrícola */
+.suelo-panel{margin-top:22px}
+.suelo-controls{display:grid;grid-template-columns:1fr 1.3fr 1fr auto;gap:14px;align-items:end;margin:16px 0}
+.suelo-controls label{margin:0 0 7px}
+.suelo-controls input.feature-select,.suelo-controls select.feature-select{width:100%}
+.suelo-controls button{min-height:44px;white-space:nowrap}
+.suelo-controls select:disabled{opacity:.5;cursor:not-allowed}
+.suelo-subinfo{padding:16px;border:1px solid var(--border,#e6ddd2);border-radius:12px;background:var(--surface-soft,rgba(227,195,154,.14));margin-bottom:16px}
+.suelo-subinfo h3{margin:0 0 10px;font-size:16px}
+.suelo-subinfo p{font-size:13px;line-height:1.6;margin:8px 0}
+.suelo-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:8px}
+.suelo-facts div{padding:10px 12px;border:1px solid var(--border,#e6ddd2);border-radius:9px;background:var(--surface,#fff)}
+.suelo-facts span{display:block;font-size:11px;color:var(--muted,#746b60)}
+.suelo-facts strong{display:block;font-size:13px;margin-top:4px}
+.suelo-small{font-size:11px!important;color:var(--muted,#746b60)}
+.suelo-small a,.suelo-panel .data-source-note a{color:inherit;text-decoration:underline}
+.suelo-card{padding:18px;border:1px solid var(--border,#e6ddd2);border-radius:12px;background:var(--surface,#fff)}
+.suelo-head{display:flex;gap:14px;align-items:center;margin-bottom:10px}
+.suelo-head h3{margin:0;font-size:16px}
+.suelo-head small{color:var(--muted,#746b60);font-size:12px}
+.suelo-pill{display:inline-block;padding:10px 20px;border-radius:26px;font-size:17px;font-weight:800;letter-spacing:.2px;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.suelo-pill.alta{background:#16a34a;color:#fff}
+.suelo-pill.media{background:#facc15;color:#3b2f00}
+.suelo-pill.baja,.suelo-pill.no{background:#dc2626;color:#fff}
+.suelo-head h3{font-size:18px}
+.suelo-verdict{font-size:14px;line-height:1.6;margin:6px 0 14px}
+.suelo-block{margin-top:14px;padding:14px;border-radius:10px;background:var(--surface-soft,rgba(227,195,154,.12))}
+.suelo-block h4{margin:0 0 8px;font-size:14px}
+.suelo-block p{font-size:13px;line-height:1.6;margin:6px 0}
+.suelo-list{margin:6px 0;padding-left:20px;font-size:13px;line-height:1.6}
+.suelo-list span{color:var(--muted,#746b60);font-size:12px}
+.suelo-pests{border-left:3px solid #C78B59}
+.suelo-danger{border-left:3px solid #c4564a}
+.suelo-months{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;margin:10px 0 6px}
+.suelo-month{display:block;text-align:center;font-size:11px;padding:7px 0;border-radius:6px;background:#e9e2d7;color:#6b6152;border:2px solid transparent}
+.suelo-month.on{background:#8A7B4C;color:#fff}
+.suelo-month.now{border-color:#3C3327}
+.suelo-months-legend{display:flex;gap:16px;font-size:11px;color:var(--muted,#746b60);margin-bottom:8px}
+.suelo-months-legend span{display:inline-flex;align-items:center;gap:6px}
+.suelo-months-legend .suelo-month{display:inline-block;width:14px;height:14px;padding:0;border-radius:4px}
+.suelo-bot{margin-top:12px;font-size:13px;line-height:1.6;white-space:pre-wrap}
+@media(max-width:1000px){.suelo-controls{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.suelo-controls{grid-template-columns:1fr}.suelo-months{grid-template-columns:repeat(6,minmax(0,1fr))}}
+
+/* Banner con la ubicación detectada desde el mapa */
+.suelo-banner{margin:14px 0 0;padding:12px 14px;border:1px solid var(--border,#e6ddd2);border-left:4px solid #8A7B4C;border-radius:10px;background:var(--surface-soft,rgba(227,195,154,.14));font-size:13px;line-height:1.6}
+.suelo-banner small{color:var(--muted,#746b60);font-size:11px}
+.location-soil-btn{width:100%;margin:12px 0 4px;justify-content:center}
+
+/* Veredicto según el nivel de aptitud */
+.suelo-verdict{padding:12px 14px;border-radius:10px;border-left:5px solid transparent}
+.suelo-card.nivel-alta .suelo-verdict{background:rgba(22,163,74,.12);border-left-color:#16a34a}
+.suelo-card.nivel-media .suelo-verdict{background:rgba(250,204,21,.2);border-left-color:#facc15}
+.suelo-card.nivel-baja .suelo-verdict,.suelo-card.nivel-no .suelo-verdict{background:rgba(220,38,38,.12);border-left-color:#dc2626;color:#b91c1c;font-weight:600}
+.suelo-nofit{margin:10px 0 0;padding:12px 14px;border-radius:10px;background:#dc2626;color:#fff;font-size:15px;font-weight:800}

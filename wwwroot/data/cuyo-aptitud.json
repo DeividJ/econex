@@ -1,0 +1,1036 @@
+{
+ "version": 1,
+ "region": {
+  "id": "cuyo",
+  "nombre": "Cuyo",
+  "provincias": "Mendoza, San Juan y San Luis"
+ },
+ "aviso": "Base de referencia orientativa elaborada para AgroAlerta. No es una respuesta en tiempo real de una API del INTA: los valores deben validarse con la Estación Experimental del INTA de la zona.",
+ "fuentes": [
+  {
+   "t": "INTA EEA Mendoza",
+   "u": "https://inta.gob.ar/mendoza"
+  },
+  {
+   "t": "INTA EEA San Juan",
+   "u": "https://inta.gob.ar/sanjuan"
+  },
+  {
+   "t": "INTA EEA San Luis",
+   "u": "https://inta.gob.ar/sanluis"
+  },
+  {
+   "t": "GeoINTA – visor de mapas de suelos",
+   "u": "https://visor.geointa.inta.gob.ar/"
+  }
+ ],
+ "subregiones": [
+  {
+   "id": "oasis",
+   "nombre": "Oasis irrigados",
+   "provincias": "Mendoza y San Juan (valles y oasis bajo riego)",
+   "altitud": "Aprox. 500 a 1.100 msnm",
+   "clima": "Árido, con lluvias menores a 300 mm anuales, mucha radiación solar y amplitud térmica, veranos cálidos e inviernos fríos con heladas. La agricultura depende del riego con agua de deshielo.",
+   "suelo": "Suelos aluviales de textura franco-arenosa a franca, bien drenados y de baja materia orgánica; riesgo de salinización por riego mal manejado y napa elevada en áreas bajas.",
+   "peligros": [
+    "Heladas tardías de primavera",
+    "Granizo en tormentas estivales",
+    "Viento Zonda",
+    "Escasez de agua de riego (poca nieve en la cordillera)",
+    "Salinización por riego"
+   ],
+   "inta": {
+    "t": "INTA EEA Mendoza",
+    "u": "https://inta.gob.ar/mendoza"
+   }
+  },
+  {
+   "id": "monte-arido",
+   "nombre": "Monte árido (travesías y piedemonte)",
+   "provincias": "Mendoza y San Juan (travesías y piedemonte)",
+   "altitud": "Aprox. 600 a 1.500 msnm",
+   "clima": "Árido a hiperárido, con lluvias de 100 a 250 mm, fuertes amplitudes térmicas y vientos frecuentes.",
+   "suelo": "Suelos arenosos y pedregosos, someros y con carbonatos, de baja materia orgánica; salinidad en cubetas y muy alta erosión eólica.",
+   "peligros": [
+    "Falta de agua (sin riego no hay cultivo)",
+    "Erosión eólica",
+    "Heladas",
+    "Salinidad",
+    "Calor extremo"
+   ],
+   "inta": {
+    "t": "INTA EEA San Juan",
+    "u": "https://inta.gob.ar/sanjuan"
+   }
+  },
+  {
+   "id": "alta-montana",
+   "nombre": "Alta montaña y precordillera",
+   "provincias": "Oeste de Mendoza y San Juan (Valle de Uco alto, Uspallata, Calingasta, Iglesia)",
+   "altitud": "Por encima de ~1.500 msnm",
+   "clima": "Frío de altura, con fuerte radiación, heladas desde el otoño hasta fines de primavera y nevadas; la temporada de crecimiento es corta.",
+   "suelo": "Suelos jóvenes, pedregosos y poco profundos, con buen drenaje y baja fertilidad; en los valles hay depósitos aluviales aprovechables con riego.",
+   "peligros": [
+    "Heladas de otoño y primavera",
+    "Granizo",
+    "Aluviones y crecidas",
+    "Viento",
+    "Temporada de crecimiento corta"
+   ],
+   "inta": {
+    "t": "INTA EEA Mendoza",
+    "u": "https://inta.gob.ar/mendoza"
+   }
+  },
+  {
+   "id": "sierras-san-luis",
+   "nombre": "Sierras y llanuras de San Luis",
+   "provincias": "San Luis (sierras, valles y llanuras)",
+   "altitud": "Aprox. 300 a 2.000 msnm",
+   "clima": "Semiárido a subhúmedo hacia el este, con lluvias de 400 a 800 mm concentradas en verano; veranos cálidos e inviernos fríos y secos con heladas.",
+   "suelo": "Suelos franco-arenosos de baja materia orgánica en las llanuras, muy susceptibles a la erosión eólica; suelos someros y pedregosos en las sierras.",
+   "peligros": [
+    "Sequías y déficit hídrico",
+    "Erosión eólica",
+    "Heladas tempranas y tardías",
+    "Granizo",
+    "Incendios en las sierras"
+   ],
+   "inta": {
+    "t": "INTA EEA San Luis",
+    "u": "https://inta.gob.ar/sanluis"
+   }
+  }
+ ],
+ "cultivos": [
+  {
+   "id": "vid",
+   "nombre": "Vid",
+   "aliases": [
+    "vid",
+    "uva",
+    "uvas",
+    "vino",
+    "vitis",
+    "viñedo"
+   ],
+   "tipo": "Frutal perenne",
+   "estacion": "Todo el año (plantación en invierno–primavera)",
+   "siembra": {
+    "meses": [
+     7,
+     8,
+     9,
+     10
+    ],
+    "texto": "Plantación de fines de invierno a primavera (julio–octubre), con riego asegurado y fuera del período de heladas."
+   },
+   "clima": "Cálido y seco, con mucha radiación y buena amplitud térmica; sensible a heladas de primavera y granizo.",
+   "agua": "Requiere aprox. 300 a 600 mm por año; en zonas áridas se maneja con riego.",
+   "plagas": [
+    {
+     "n": "Oídio (Erysiphe necator)",
+     "d": "Polvo blanquecino en hojas y racimos; reduce calidad."
+    },
+    {
+     "n": "Peronospora (Plasmopara viticola)",
+     "d": "Favorecida por lluvias y humedad en primavera."
+    },
+    {
+     "n": "Polilla de la vid (Lobesia botrana)",
+     "d": "Plaga cuarentenaria bajo programa oficial de SENASA."
+    },
+    {
+     "n": "Botrytis y podredumbres del racimo",
+     "d": "Más frecuentes con lluvias cerca de la cosecha."
+    },
+    {
+     "n": "Chinches y otras plagas secundarias",
+     "d": "Pueden afectar brotes y bayas."
+    }
+   ],
+   "peligros": [
+    "Heladas tardías de primavera",
+    "Granizo",
+    "Viento (Zonda)",
+    "Falta de agua de riego"
+   ],
+   "recomendaciones": [
+    "Seguir las medidas del programa oficial contra Lobesia botrana.",
+    "Elegir cultivar, portainjerto y sistema de conducción según el sitio.",
+    "Instalar defensa activa o pasiva contra heladas y granizo."
+   ],
+   "aptitud": {
+    "oasis": [
+     "alta",
+     "Región vitivinícola más importante del país, con riego por surco o goteo."
+    ],
+    "monte-arido": [
+     "baja",
+     "Solo con riego y agua de calidad; el viento y la erosión son limitantes."
+    ],
+    "alta-montana": [
+     "media",
+     "Viñedos de altura (Valle de Uco, Calingasta) con muy buena calidad; mayor riesgo de heladas y granizo."
+    ],
+    "sierras-san-luis": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "olivo",
+   "nombre": "Olivo",
+   "aliases": [
+    "olivo",
+    "oliva",
+    "aceituna",
+    "olea europaea"
+   ],
+   "tipo": "Frutal perenne",
+   "estacion": "Todo el año (plantación en primavera)",
+   "siembra": {
+    "meses": [
+     8,
+     9,
+     10
+    ],
+    "texto": "Plantación en primavera (agosto–octubre) o a fines de otoño en zonas sin heladas fuertes."
+   },
+   "clima": "Mediterráneo cálido y seco; tolera sequía pero los fríos fuertes (menos de -8 a -10 °C) lo dañan.",
+   "agua": "Produce con aprox. 400 a 600 mm; en zonas áridas necesita riego.",
+   "plagas": [
+    {
+     "n": "Cochinilla negra (Saissetia oleae) y negrilla",
+     "d": "Debilita la planta y ensucia hojas."
+    },
+    {
+     "n": "Repilo u ojo de pavo (Spilocaea oleaginea)",
+     "d": "Manchas foliares con caída de hojas; favorecido por humedad."
+    },
+    {
+     "n": "Tuberculosis (Pseudomonas savastanoi)",
+     "d": "Tumores en ramas; se propaga por heridas y poda."
+    },
+    {
+     "n": "Verticilosis (Verticillium dahliae)",
+     "d": "Marchitez por hongo del suelo; evitar suelos con historia."
+    }
+   ],
+   "peligros": [
+    "Heladas",
+    "Granizo",
+    "Anegamiento",
+    "Viento en floración"
+   ],
+   "recomendaciones": [
+    "Elegir variedades según destino (aceite o mesa) y frío de la zona.",
+    "Instalar riego por goteo.",
+    "Evitar suelos con mal drenaje."
+   ],
+   "aptitud": {
+    "oasis": [
+     "alta",
+     "Muy buena aptitud con riego por goteo; riesgo de heladas en sitios bajos."
+    ],
+    "monte-arido": [
+     "media",
+     "Con riego, tolera bien el calor y la sequedad."
+    ],
+    "alta-montana": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "sierras-san-luis": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "ajo",
+   "nombre": "Ajo",
+   "aliases": [
+    "ajo",
+    "allium sativum"
+   ],
+   "tipo": "Hortaliza de bulbo",
+   "estacion": "Otoño–invierno (plantación) con cosecha en primavera–verano",
+   "siembra": {
+    "meses": [
+     3,
+     4,
+     5
+    ],
+    "texto": "Plantación de marzo a mayo, según cultivar (violetas más tempranos, blancos y colorados hasta mayo)."
+   },
+   "clima": "Requiere frío para bulbificar; cultivo invernal–primaveral con riego.",
+   "agua": "Necesita riego regular; no tolera encharcamiento.",
+   "plagas": [
+    {
+     "n": "Podredumbre blanca (Sclerotium cepivorum)",
+     "d": "Hongo persistente en el suelo; evitar lotes infectados."
+    },
+    {
+     "n": "Fusarium y Penicillium",
+     "d": "Pudriciones de bulbo en campo y almacenamiento."
+    },
+    {
+     "n": "Trips (Thrips tabaci) y ácaro del bulbo",
+     "d": "Afectan hojas y bulbos."
+    },
+    {
+     "n": "Virus del ajo",
+     "d": "Se transmiten con semilla infectada."
+    }
+   ],
+   "peligros": [
+    "Heladas muy tardías",
+    "Lluvias en cosecha",
+    "Granizo",
+    "Salinidad"
+   ],
+   "recomendaciones": [
+    "Usar bulbillos sanos y saneados.",
+    "Rotar al menos 4 años.",
+    "Curar el ajo adecuadamente antes del almacenamiento."
+   ],
+   "aptitud": {
+    "oasis": [
+     "alta",
+     "Mendoza es la principal provincia productora de ajo del país."
+    ],
+    "monte-arido": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "alta-montana": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "sierras-san-luis": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "cebolla",
+   "nombre": "Cebolla",
+   "aliases": [
+    "cebolla",
+    "allium cepa"
+   ],
+   "tipo": "Hortaliza de bulbo",
+   "estacion": "Otoño–invierno o primavera (según ciclo)",
+   "siembra": {
+    "meses": [
+     7,
+     8,
+     9
+    ],
+    "texto": "Siembra directa de julio a septiembre para cebolla de guarda; ciclos tempranos con almácigo en otoño."
+   },
+   "clima": "Cultivo de clima templado, sensible al fotoperíodo; requiere riego uniforme.",
+   "agua": "Necesita riego regular; no tolera encharcamiento.",
+   "plagas": [
+    {
+     "n": "Peronospora (Peronospora destructor)",
+     "d": "Favorecida por humedad y temperaturas frescas."
+    },
+    {
+     "n": "Podredumbres de bulbo (Sclerotium, Fusarium, Botrytis)",
+     "d": "Pérdidas en campo y almacenamiento."
+    },
+    {
+     "n": "Trips (Thrips tabaci)",
+     "d": "Raspan hojas y reducen el tamaño del bulbo."
+    },
+    {
+     "n": "Mancha púrpura (Alternaria porri)",
+     "d": "Lesiones foliares con humedad alta."
+    }
+   ],
+   "peligros": [
+    "Granizo",
+    "Lluvias en cosecha",
+    "Salinidad",
+    "Subida a flor por frío fuera de época"
+   ],
+   "recomendaciones": [
+    "Elegir cultivares según el fotoperíodo de la zona.",
+    "Rotar con gramíneas.",
+    "Curar bien los bulbos antes de almacenar."
+   ],
+   "aptitud": {
+    "oasis": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "monte-arido": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "alta-montana": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "sierras-san-luis": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "tomate",
+   "nombre": "Tomate",
+   "aliases": [
+    "tomate",
+    "tomate industria",
+    "solanum lycopersicum"
+   ],
+   "tipo": "Hortaliza de fruto",
+   "estacion": "Primavera–verano (trasplante)",
+   "siembra": {
+    "meses": [
+     9,
+     10,
+     11
+    ],
+    "texto": "Trasplante de septiembre a noviembre, ya sin riesgo de heladas."
+   },
+   "clima": "Óptimo de 18 a 30 °C; sensible a heladas y a calor extremo (caída de flores).",
+   "agua": "Requiere riego regular; aprox. 400 a 600 mm durante el ciclo.",
+   "plagas": [
+    {
+     "n": "Tuta absoluta",
+     "d": "Minadora de hojas y frutos; plaga clave del tomate."
+    },
+    {
+     "n": "Tizón (Phytophthora infestans) y Alternaria",
+     "d": "Favorecidos por humedad y rocío."
+    },
+    {
+     "n": "Mosca blanca y virus",
+     "d": "Transmiten virus que reducen el rendimiento."
+    },
+    {
+     "n": "Nematodos agalladores (Meloidogyne)",
+     "d": "Deforman raíces y limitan el crecimiento."
+    }
+   ],
+   "peligros": [
+    "Heladas",
+    "Granizo",
+    "Calor extremo en floración",
+    "Lluvias en cosecha (tomate para industria)"
+   ],
+   "recomendaciones": [
+    "Usar plantines sanos.",
+    "Rotar con gramíneas.",
+    "Monitorear Tuta absoluta con trampas de feromonas."
+   ],
+   "aptitud": {
+    "oasis": [
+     "alta",
+     "Principal zona de tomate para industria (San Juan y Mendoza), con riego."
+    ],
+    "monte-arido": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "alta-montana": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "sierras-san-luis": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "papa",
+   "nombre": "Papa",
+   "aliases": [
+    "papa",
+    "patata",
+    "solanum tuberosum"
+   ],
+   "tipo": "Hortaliza de tubérculo",
+   "estacion": "Primavera–verano (siembra según zona)",
+   "siembra": {
+    "meses": [
+     8,
+     9,
+     10
+    ],
+    "texto": "Siembra de agosto a octubre; en zonas altas hasta noviembre."
+   },
+   "clima": "Óptimo de 15 a 20 °C; la tuberización se frena por encima de 25 °C; sensible a heladas.",
+   "agua": "Requiere aprox. 500 a 700 mm bien distribuidos; riego en zonas secas.",
+   "plagas": [
+    {
+     "n": "Tizón tardío (Phytophthora infestans)",
+     "d": "Muy dañino con humedad y temperaturas templadas; monitorear y proteger preventivamente."
+    },
+    {
+     "n": "Tizón temprano (Alternaria solani)",
+     "d": "Más frecuente en cultivos estresados o con calor."
+    },
+    {
+     "n": "Virus (PVY, PLRV) y pulgones",
+     "d": "Se transmiten por pulgones y semilla infectada."
+    },
+    {
+     "n": "Polilla de la papa (Phthorimaea operculella) y plagas del suelo",
+     "d": "Dañan tubérculos en campo y almacenamiento; también gusanos de alambre y nematodos."
+    }
+   ],
+   "peligros": [
+    "Heladas",
+    "Calor excesivo en tuberización",
+    "Encharcamiento",
+    "Granizo"
+   ],
+   "recomendaciones": [
+    "Usar semilla certificada.",
+    "Rotar 3 o 4 años con gramíneas para evitar enfermedades del suelo.",
+    "Monitorear tizón en períodos húmedos."
+   ],
+   "aptitud": {
+    "oasis": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "monte-arido": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "alta-montana": [
+     "media",
+     "Cultivo de altura con buena sanidad por el frío; temporada corta."
+    ],
+    "sierras-san-luis": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {
+    "alta-montana": {
+     "meses": [
+      10,
+      11
+     ],
+     "texto": "Octubre a noviembre, ya pasado el riesgo de heladas fuertes."
+    }
+   }
+  },
+  {
+   "id": "carozo",
+   "nombre": "Frutales de carozo (durazno, ciruela, damasco)",
+   "aliases": [
+    "durazno",
+    "ciruela",
+    "damasco",
+    "carozo",
+    "carozos",
+    "nectarina",
+    "prunus"
+   ],
+   "tipo": "Frutal perenne",
+   "estacion": "Todo el año (plantación en reposo invernal)",
+   "siembra": {
+    "meses": [
+     6,
+     7,
+     8
+    ],
+    "texto": "Plantación a raíz desnuda en reposo invernal (junio a agosto)."
+   },
+   "clima": "Requieren horas de frío invernal; muy sensibles a heladas durante la floración.",
+   "agua": "Aprox. 600 a 900 mm por año; en zonas áridas necesitan riego.",
+   "plagas": [
+    {
+     "n": "Grafolita (Grapholita molesta)",
+     "d": "Perfora brotes y frutos."
+    },
+    {
+     "n": "Monilia (Monilinia fructicola)",
+     "d": "Pudrición del fruto con humedad en maduración."
+    },
+    {
+     "n": "Cochinilla de San José y pulgones",
+     "d": "Debilitan la planta y afectan el fruto."
+    },
+    {
+     "n": "Mosca de los frutos (Ceratitis capitata)",
+     "d": "Daño directo en frutos maduros."
+    }
+   ],
+   "peligros": [
+    "Heladas tardías en floración",
+    "Granizo",
+    "Viento Zonda",
+    "Lluvias en madurez"
+   ],
+   "recomendaciones": [
+    "Elegir variedades según horas de frío de la zona.",
+    "Instalar defensas contra heladas.",
+    "Hacer raleo para calibre y calidad."
+   ],
+   "aptitud": {
+    "oasis": [
+     "alta",
+     "Zona tradicional de durazno y ciruela (Mendoza, San Juan), con riesgo de heladas en floración."
+    ],
+    "monte-arido": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "alta-montana": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "sierras-san-luis": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "nogal",
+   "nombre": "Nogal",
+   "aliases": [
+    "nogal",
+    "nuez",
+    "nueces",
+    "juglans regia"
+   ],
+   "tipo": "Frutal perenne",
+   "estacion": "Todo el año (plantación en reposo invernal)",
+   "siembra": {
+    "meses": [
+     6,
+     7,
+     8
+    ],
+    "texto": "Plantación en reposo invernal (junio a agosto), con riego."
+   },
+   "clima": "Clima templado con frío invernal; sensible a heladas tardías.",
+   "agua": "Requiere riego regular; aprox. 700 a 1.000 mm por año.",
+   "plagas": [
+    {
+     "n": "Carpocapsa (Cydia pomonella)",
+     "d": "Larvas que dañan la nuez; monitoreo con trampas."
+    },
+    {
+     "n": "Bacteriosis (Xanthomonas arboricola pv. juglandis)",
+     "d": "Manchas en hojas y frutos con lluvias."
+    },
+    {
+     "n": "Antracnosis (Gnomonia leptostyla)",
+     "d": "Caída temprana de hojas con humedad."
+    },
+    {
+     "n": "Ácaros y pulgones",
+     "d": "Afectan hojas y reducen el vigor."
+    }
+   ],
+   "peligros": [
+    "Heladas tardías",
+    "Viento",
+    "Granizo",
+    "Suelos con mal drenaje"
+   ],
+   "recomendaciones": [
+    "Elegir variedades adaptadas a la zona.",
+    "Plantar en suelos profundos y bien drenados.",
+    "Controlar carpocapsa con monitoreo."
+   ],
+   "aptitud": {
+    "oasis": [
+     "alta",
+     "Cultivo creciente en el Valle de Uco y en San Juan."
+    ],
+    "monte-arido": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "alta-montana": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "sierras-san-luis": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "alfalfa",
+   "nombre": "Alfalfa",
+   "aliases": [
+    "alfalfa",
+    "medicago sativa"
+   ],
+   "tipo": "Forrajera perenne",
+   "estacion": "Todo el año (implantación en otoño o primavera temprana)",
+   "siembra": {
+    "meses": [
+     3,
+     4,
+     5,
+     9,
+     10
+    ],
+    "texto": "Otoño (marzo a mayo) y primavera temprana (septiembre–octubre)."
+   },
+   "clima": "Perenne; tolera frío invernal y calor, óptimo de 15 a 25 °C; sensible al encharcamiento.",
+   "agua": "Alta demanda (aprox. 800 a 1.200 mm por año); en zonas áridas se maneja bajo riego.",
+   "plagas": [
+    {
+     "n": "Pulgones (azul, moteado y verde)",
+     "d": "Debilitan la planta y reducen la calidad; monitorear tras cada corte."
+    },
+    {
+     "n": "Isoca de la alfalfa (Colias lesbia)",
+     "d": "Defolia el cultivo en brotes de primavera y verano."
+    },
+    {
+     "n": "Podredumbres de raíz y corona (Phytophthora, Fusarium)",
+     "d": "Más frecuentes con anegamiento y suelos mal drenados."
+    },
+    {
+     "n": "Cuscuta (maleza parásita)",
+     "d": "Se evita con semilla certificada libre de cuscuta."
+    }
+   ],
+   "peligros": [
+    "Anegamiento",
+    "Sequía sin riego",
+    "Salinidad",
+    "Heladas tardías en rebrote"
+   ],
+   "recomendaciones": [
+    "Elegir grupo de reposo invernal según la zona.",
+    "Cortar con 10% de floración para cuidar calidad y persistencia.",
+    "Implantar en lotes nivelados y con semilla certificada."
+   ],
+   "aptitud": {
+    "oasis": [
+     "alta",
+     "Condiciones agroecológicas favorables; es un cultivo de referencia o muy adaptado en esta subregión."
+    ],
+    "monte-arido": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "alta-montana": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "sierras-san-luis": [
+     "alta",
+     "Base forrajera de San Luis; produce bien en las llanuras con lluvias de verano."
+    ]
+   },
+   "siembraZona": {
+    "alta-montana": {
+     "meses": [
+      9,
+      10,
+      11
+     ],
+     "texto": "Septiembre a noviembre, ya pasadas las heladas fuertes."
+    }
+   }
+  },
+  {
+   "id": "maiz",
+   "nombre": "Maíz",
+   "aliases": [
+    "maiz",
+    "maíz",
+    "choclo",
+    "zea mays"
+   ],
+   "tipo": "Cereal estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     10,
+     11,
+     12
+    ],
+    "texto": "Octubre a diciembre, evitando heladas tardías."
+   },
+   "clima": "Temperatura óptima de 20 a 30 °C; evitar que la floración coincida con calor extremo (>35 °C).",
+   "agua": "Requiere aprox. 500 a 700 mm; el período crítico es alrededor de la floración.",
+   "plagas": [
+    {
+     "n": "Chicharrita del maíz (Dalbulus maidis) y achaparramiento",
+     "d": "Transmite espiroplasma/fitoplasma; las siembras tardías tienen mayor presión. Considerar híbridos tolerantes."
+    },
+    {
+     "n": "Cogollero (Spodoptera frugiperda)",
+     "d": "Ataca cogollo y espiga; monitorear desde la emergencia."
+    },
+    {
+     "n": "Barrenador del tallo (Diatraea saccharalis)",
+     "d": "Daño en tallo y espiga; favorece el vuelco."
+    },
+    {
+     "n": "Royas y tizón foliar (Exserohilum turcicum)",
+     "d": "Más frecuentes con humedad y temperaturas templadas."
+    },
+    {
+     "n": "Podredumbre de espiga y micotoxinas",
+     "d": "Asociadas a lluvias en madurez y daño de insectos."
+    }
+   ],
+   "peligros": [
+    "Estrés hídrico y golpe de calor en floración",
+    "Vuelco por vientos",
+    "Granizo",
+    "Heladas tempranas en siembras muy tardías"
+   ],
+   "recomendaciones": [
+    "Elegir híbridos adaptados a la zona y a la fecha de siembra.",
+    "Planificar la siembra para que la floración no coincida con el momento más caluroso o seco.",
+    "Rotar con soja u otra leguminosa para balancear nutrientes."
+   ],
+   "aptitud": {
+    "oasis": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "monte-arido": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "alta-montana": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "sierras-san-luis": [
+     "alta",
+     "Cultivo de referencia en San Luis, con lluvias de verano; sensible a sequías."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "trigo",
+   "nombre": "Trigo",
+   "aliases": [
+    "trigo",
+    "triticum"
+   ],
+   "tipo": "Cereal invernal",
+   "estacion": "Otoño–invierno (cultivo invernal)",
+   "siembra": {
+    "meses": [
+     5,
+     6,
+     7
+    ],
+    "texto": "Mayo a julio."
+   },
+   "clima": "Crece con 10 a 22 °C y necesita frío invernal; sensible a heladas en espigazón y a calor en llenado.",
+   "agua": "Requiere aprox. 350 a 550 mm; cuidar el balance hídrico en encañazón y llenado de granos.",
+   "plagas": [
+    {
+     "n": "Royas de la hoja y amarilla (Puccinia triticina, P. striiformis)",
+     "d": "Favorecidas por humedad y temperaturas templadas; elegir cultivares con buena resistencia."
+    },
+    {
+     "n": "Fusariosis de la espiga (Fusarium graminearum)",
+     "d": "Favorecida por lluvias en floración; riesgo de micotoxinas (DON)."
+    },
+    {
+     "n": "Mancha amarilla y septoriosis",
+     "d": "Enfermedades foliares de rastrojo; la rotación reduce la presión."
+    },
+    {
+     "n": "Pulgones y virus del enanismo amarillo de la cebada",
+     "d": "Los pulgones transmiten virus; monitorear en macollaje."
+    }
+   ],
+   "peligros": [
+    "Heladas en espigazón y floración",
+    "Estrés hídrico o calor en llenado",
+    "Granizo",
+    "Vuelco"
+   ],
+   "recomendaciones": [
+    "Elegir cultivares de ciclo adecuado a la fecha de siembra.",
+    "Monitorear enfermedades foliares y decidir fungicidas según umbral.",
+    "Evitar que la floración coincida con heladas tardías."
+   ],
+   "aptitud": {
+    "oasis": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ],
+    "monte-arido": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "alta-montana": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "sierras-san-luis": [
+     "media",
+     "Se puede cultivar, pero con limitantes (clima, suelo o agua) que conviene manejar con variedad, fecha de siembra y riego adecuados."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "soja",
+   "nombre": "Soja",
+   "aliases": [
+    "soja",
+    "soya",
+    "glycine max"
+   ],
+   "tipo": "Oleaginosa estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     11,
+     12
+    ],
+    "texto": "Noviembre a diciembre."
+   },
+   "clima": "Temperatura óptima de 20 a 30 °C; sensible a heladas en emergencia y a calor o sequía en floración y llenado de granos.",
+   "agua": "Requiere aprox. 450 a 700 mm durante el ciclo; los períodos críticos son floración y llenado de granos.",
+   "plagas": [
+    {
+     "n": "Chinches (Nezara viridula, Piezodorus guildinii)",
+     "d": "Dañan vainas y granos durante el llenado; monitorear desde R3 según umbrales."
+    },
+    {
+     "n": "Orugas defoliadoras (Anticarsia gemmatalis, Rachiplusia nu)",
+     "d": "Consumen follaje; controlar solo al superar los umbrales de daño."
+    },
+    {
+     "n": "Roya asiática (Phakopsora pachyrhizi)",
+     "d": "Favorecida por humedad y temperaturas templadas; puede causar defoliación severa."
+    },
+    {
+     "n": "Enfermedades de fin de ciclo y mancha ojo de rana",
+     "d": "Frecuentes en años lluviosos; la rotación y el monitoreo ayudan a decidir el uso de fungicidas."
+    }
+   ],
+   "peligros": [
+    "Déficit hídrico en floración y llenado",
+    "Heladas tempranas o tardías",
+    "Granizo",
+    "Anegamiento en suelos mal drenados"
+   ],
+   "recomendaciones": [
+    "Elegir grupo de madurez según latitud y fecha de siembra.",
+    "Rotar con gramíneas (maíz, trigo) para sanidad y cobertura del suelo.",
+    "Monitorear plagas y enfermedades y usar umbrales de daño."
+   ],
+   "aptitud": {
+    "oasis": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "monte-arido": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "alta-montana": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "sierras-san-luis": [
+     "media",
+     "Se cultiva en el este y noreste de San Luis con lluvias estivales."
+    ]
+   },
+   "siembraZona": {}
+  },
+  {
+   "id": "girasol",
+   "nombre": "Girasol",
+   "aliases": [
+    "girasol",
+    "helianthus"
+   ],
+   "tipo": "Oleaginosa estival",
+   "estacion": "Primavera–verano (cultivo estival)",
+   "siembra": {
+    "meses": [
+     9,
+     10,
+     11
+    ],
+    "texto": "Septiembre a noviembre."
+   },
+   "clima": "Óptimo de 20 a 28 °C; tolera sequía moderada, pero es sensible a heladas en estadios iniciales.",
+   "agua": "Requiere aprox. 300 a 600 mm; la floración y el llenado son los momentos críticos.",
+   "plagas": [
+    {
+     "n": "Podredumbre blanca del capítulo (Sclerotinia)",
+     "d": "Favorecida por lluvias y humedad en floración y llenado."
+    },
+    {
+     "n": "Mancha negra del tallo (Phoma) y tizón por Alternaria",
+     "d": "Pueden adelantar la madurez y reducir el rendimiento."
+    },
+    {
+     "n": "Orugas y chinches",
+     "d": "Orugas defoliadoras y chinches pueden dañar plántulas, hojas y capítulos."
+    },
+    {
+     "n": "Aves (palomas, cotorras)",
+     "d": "Dañan capítulos durante la madurez; en lotes grandes pueden causar pérdidas importantes."
+    }
+   ],
+   "peligros": [
+    "Granizo",
+    "Vuelco por viento en fin de ciclo",
+    "Heladas en emergencia",
+    "Lluvias en cosecha (podredumbre del capítulo)"
+   ],
+   "recomendaciones": [
+    "Elegir híbridos con tolerancia a enfermedades y ciclo adecuado.",
+    "Evitar rotaciones muy cortas con girasol, soja o colza (Sclerotinia).",
+    "Planificar la cosecha para evitar pérdidas por aves y lluvias."
+   ],
+   "aptitud": {
+    "oasis": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "monte-arido": [
+     "baja",
+     "Aptitud baja: solo en ambientes puntuales o con manejo intensivo; el riesgo de pérdidas es alto."
+    ],
+    "alta-montana": [
+     "no",
+     "No recomendado: el clima o el suelo de la subregión impiden o hacen inviable el cultivo."
+    ],
+    "sierras-san-luis": [
+     "media",
+     "Buena adaptación a suelos livianos y a ambientes con déficit hídrico moderado."
+    ]
+   },
+   "siembraZona": {}
+  }
+ ]
+}
